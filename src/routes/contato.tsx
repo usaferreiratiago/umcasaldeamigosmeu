@@ -197,7 +197,7 @@ function Contato() {
             <div className="aspect-4/3 w-full overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 rounded-sm">
               <iframe
                 title="Localização Insight Clínica"
-                src="https://maps.google.com/maps?q=Rua%20Benedito%20Onecimo%20Martins,%2023%20Vila%20Bom%20Jesus%20Coronel%20Fabriciano&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Madrid,Spain&t=&z=12&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 loading="lazy"
