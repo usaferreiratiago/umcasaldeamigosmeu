@@ -72,7 +72,7 @@ function Home() {
               className="mb-8 inline-flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-zinc-600 dark:text-zinc-400 font-semibold"
             >
               <span className="h-px w-10 bg-orange-700 dark:bg-orange-600" />
-              Desde 1986 · Madrid, Espanha
+              Desde 2016 · Madrid, Espanha
             </motion.div>
 
             <motion.h1
@@ -123,10 +123,10 @@ function Home() {
         <div className="relative border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
           <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-zinc-200 dark:divide-zinc-800 md:grid-cols-4">
             {[
-              { k: "+40", l: "anos de mercado" },
-              { k: "200+", l: "obras entregues" },
-              { k: "MG", l: "Vale do Aço" },
-              { k: "100%", l: "prazo cumprido" },
+              { k: "+10", l: "anos de mercado" },
+              { k: "2000+", l: "Passeios entregue" },
+              { k: "Espanha", l: "Madrid" },
+              { k: "100%", l: "Satisfação Garantida" },
             ].map((s) => (
               <div key={s.l} className="px-6 py-8 lg:px-10">
                 <div className="font-display text-3xl font-medium text-zinc-900 dark:text-zinc-50 md:text-4xl">
