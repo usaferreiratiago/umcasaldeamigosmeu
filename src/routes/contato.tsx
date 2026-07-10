@@ -119,7 +119,7 @@ function Contato() {
           >
             <div className="space-y-6">
               <a
-                href="tel:+5531988191660"
+                href="tel:+34662433882"
                 className="group flex items-start gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-6 w-full"
               >
                 <Phone
