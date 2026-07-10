@@ -287,7 +287,7 @@ function Contato() {
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center pt-2 border-t border-zinc-200 dark:border-zinc-800">
                 {/* Botão: LinkedIn */}
                 <a
-                  href="https://linkedin.com/company/sua-clinica" /* Substitua com o link correto */
+                  href="https://linkedin.com/company" /* Substitua com o link correto */
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex w-full items-center justify-center gap-3 rounded-sm border border-blue-600/30 bg-blue-50/50 hover:bg-blue-600 dark:border-blue-500/20 dark:bg-blue-950/20 dark:hover:bg-blue-600 px-6 py-3 text-sm font-medium text-blue-700 dark:text-blue-400 hover:text-white dark:hover:text-white transition-all md:w-auto cursor-pointer"
@@ -298,7 +298,7 @@ function Contato() {
 
                 {/* Botão: Instagram */}
                 <a
-                  href="https://instagram.com/psicologashirleyoficial" /* Substitua com o link correto */
+                  href="https://instagram.com/umcasaldeamigosmeu" /* Substitua com o link correto */
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex w-full items-center justify-center gap-3 rounded-sm border border-pink-600/30 bg-pink-50/50 hover:bg-pink-600 dark:border-pink-500/20 dark:bg-pink-950/20 dark:hover:bg-pink-600 px-6 py-3 text-sm font-medium text-pink-700 dark:text-pink-400 hover:text-white dark:hover:text-white transition-all md:w-auto cursor-pointer"
