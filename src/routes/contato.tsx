@@ -184,7 +184,7 @@ function Contato() {
                     <br />
                     xxxxxxxxxxxx
                     <br />
-                    MG — CEP 000000
+                    ES — CEP 000000
                   </div>
                   <div className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">NIF B12345678</div>
                 </div>
