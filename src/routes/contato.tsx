@@ -131,7 +131,7 @@ function Contato() {
                     Telefone
                   </div>
                   <div className="mt-1 font-display text-lg sm:text-xl text-zinc-900 transition group-hover:text-orange-700 dark:text-zinc-200 dark:group-hover:text-orange-500 truncate">
-                    (31) 3841-1290
+                    +34 662 433 882
                   </div>
                 </div>
               </a>
@@ -149,7 +149,7 @@ function Contato() {
                     E-mail
                   </div>
                   <div className="mt-1 font-display text-lg sm:text-xl text-zinc-900 transition group-hover:text-orange-700 dark:text-zinc-200 dark:group-hover:text-orange-500 break-all">
-                    contato@senoengenharia.com.br
+                    contato@umcasaldeamigosmeu.es
                   </div>
                 </div>
               </a>
