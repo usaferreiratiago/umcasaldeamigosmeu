@@ -177,18 +177,16 @@ function Contato() {
                 />
                 <div className="min-w-0 wrap-break-word">
                   <div className="text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400 font-semibold">
-                    Endereço
+                    Calle
                   </div>
                   <div className="mt-1 font-display text-lg sm:text-xl leading-snug text-zinc-900 dark:text-zinc-200">
-                    Rua Benedito Onecimo Martins, 23
+                    Calle xxxxxxxx, 00
                     <br />
-                    Vila Bom Jesus — Cel. Fabriciano
+                    xxxxxxxxxxxx
                     <br />
-                    MG — CEP 35170-123
+                    MG — CEP 000000
                   </div>
-                  <div className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
-                    CNPJ 20.853.842/0001-01
-                  </div>
+                  <div className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">NIF B12345678</div>
                 </div>
               </div>
             </div>
