@@ -190,6 +190,12 @@ function Home() {
               t: "Contato",
               d: "Entre em contato para parcerias, sugestões ou para falar conosco.",
             },
+            {
+              to: "/parceiros",
+              n: "07",
+              t: "Parceiros",
+              d: "Conheça nossos parceiros e colaboradores.",
+            },
           ].map((c) => (
             <Link
               key={c.to}
