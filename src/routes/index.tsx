@@ -7,14 +7,20 @@ import heroImg from "@/assets/main_picture/channels4_profile.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Seno Engenharia — +40 anos construindo no Vale do Aço" },
+      { title: "Um Casal de Amigos Meu — Histórias, viagens e momentos inesquecíveis" },
       {
         name: "description",
         content:
-          "Projetos, obras civis e gerenciamento de construção em Coronel Fabriciano/MG. CNPJ 20.853.842/0001-01.",
+          "Acompanhe o canal Um Casal de Amigos Meu e descubra viagens, passeios, aventuras e momentos especiais compartilhados com a comunidade.",
       },
-      { property: "og:title", content: "Seno Engenharia — Projetos e Construções" },
-      { property: "og:description", content: "+40 anos de engenharia em Coronel Fabriciano/MG." },
+      {
+        property: "og:title",
+        content: "Um Casal de Amigos Meu",
+      },
+      {
+        property: "og:description",
+        content: "Viagens, passeios, experiências e histórias vividas por um casal de amigos.",
+      },
       { property: "og:image", content: heroImg },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -23,15 +29,15 @@ export const Route = createFileRoute("/")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "GeneralContractor",
-          name: "Seno Engenharia Projetos Construções LTDA - ME",
-          taxID: "20.853.842/0001-01",
+          "@type": "Person",
+          name: "Um Casal de Amigos Meu",
+          jobTitle: "Criadores de Conteúdo",
+          sameAs: ["https://www.youtube.com/@umcasaldeamigosmeu"],
           foundingDate: "1986",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Coronel Fabriciano",
-            addressRegion: "MG",
-            addressCountry: "BR",
+            addressLocality: "Madrid",
+            addressCountry: "ES",
           },
           areaServed: "Vale do Aço, Minas Gerais",
         }),
@@ -56,7 +62,7 @@ function Home() {
         <div className="absolute inset-0">
           <img
             src={heroImg}
-            alt="Obra em concreto da Seno Engenharia"
+            alt="Obra em concreto da Um casal de amigos meu"
             width={1920}
             height={1080}
             className="h-full w-full object-cover"
@@ -149,7 +155,7 @@ function Home() {
               to: "/sobre",
               n: "01",
               t: "Sobre",
-              d: "+40 anos de engenharia honesta no Vale do Aço.",
+              d: "+10 anos de engenharia honesta no Vale do Aço.",
             },
             {
               to: "/servicos",
@@ -173,7 +179,7 @@ function Home() {
               to: "/funcionarios",
               n: "05",
               t: "Funcionários",
-              d: "Conheça a equipe por trás das obras da Seno Engenharia.",
+              d: "Conheça a equipe por trás das obras da Um casal de amigos meu.",
             },
             {
               to: "/contato",
