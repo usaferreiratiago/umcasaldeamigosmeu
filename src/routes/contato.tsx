@@ -179,10 +179,10 @@ function Contato() {
                 />
                 <div className="min-w-0 wrap-break-word">
                   <div className="text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400 font-semibold">
-                    Calle
+                    Endereço
                   </div>
                   <div className="mt-1 font-display text-lg sm:text-xl leading-snug text-zinc-900 dark:text-zinc-200">
-                    Calle xxxxxxxx, 00
+                    Endereço xxxxxxxx, 00
                     <br />
                     xxxxxxxxxxxx
                     <br />
