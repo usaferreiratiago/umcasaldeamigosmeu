@@ -185,10 +185,10 @@ function Home() {
               d: "Conheça quem está por trás das câmeras e das histórias.",
             },
             {
-              to: "/contato",
+              to: "/dicas",
               n: "06",
-              t: "Contato",
-              d: "Entre em contato para parcerias, sugestões ou para falar conosco.",
+              t: "Dicas",
+              d: "Conheça nossas dicas importantes",
             },
             {
               to: "/parceiros",
@@ -197,10 +197,10 @@ function Home() {
               d: "Conheça nossos parceiros e colaboradores.",
             },
             {
-              to: "/dicas",
+              to: "/contato",
               n: "08",
-              t: "Dicas",
-              d: "Conheça nossas dicas importantes",
+              t: "Contato",
+              d: "Entre em contato para parcerias, sugestões ou para falar conosco.",
             },
           ].map((c) => (
             <Link

@@ -35,13 +35,6 @@ export const Route = createFileRoute("/dicas")({
 // Mock configurado com os IDs dos vídeos (os títulos servem como fallback inicial)
 const allProjects = [
   {
-    youtubeId: "7I2L67_Un8k",
-    title: "Viagem • Madrid, Espanha, Holafly, Wise",
-    type: "Viagem • Madrid, Espanha, Holafly, Wise",
-    year: "2026",
-    url: "https://www.youtube.com/watch?v=7I2L67_Un8k",
-  },
-  {
     youtubeId: "vC1ufViZovI",
     title: "Espana Mas",
     type: "Espana Mas",
@@ -194,9 +187,9 @@ function dicas() {
       </div>
 
       <PageHeader
-        eyebrow="— 07 / dicas"
-        title="Conheça nossos dicas e colaboradores."
-        intro="Descubra as empresas e indivíduos que nos ajudam a criar conteúdo incrível e experiências memoráveis para nossa comunidade."
+        eyebrow="— 06 / Dicas"
+        title="Conheça nossas dicas importantes."
+        intro="Aqui você encontrará dicas valiosas para aproveitar ao máximo suas viagens, passeios e experiências. Compartilhamos informações úteis, recomendações e insights que podem tornar suas aventuras ainda mais memoráveis."
       />
 
       <section className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-300">

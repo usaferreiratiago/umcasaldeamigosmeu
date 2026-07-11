@@ -23,7 +23,7 @@ const ContatoRoute = ContatoImport.update({ path: '/contato', getParentRoute: ()
 const FuncionariosRoute = FuncionariosImport.update({ path: '/funcionarios', getParentRoute: () => rootRoute } as any) // ADICIONADO
 const VideosRoute = VideosImport.update({ path: '/videos', getParentRoute: () => rootRoute } as any)
 const ParceirosRoute = ParceirosImport.update({ path: '/parceiros', getParentRoute: () => rootRoute } as any)
-const ParceirosRoute = DicasImport.update({ path: '/dicas', getParentRoute: () => rootRoute } as any)
+const DicasRoute = DicasImport.update({ path: '/dicas', getParentRoute: () => rootRoute } as any)
 const ConteudoRoute = ConteudoImport.update({ path: '/conteudo', getParentRoute: () => rootRoute } as any)
 const SobreRoute = SobreImport.update({ path: '/sobre', getParentRoute: () => rootRoute } as any)
 

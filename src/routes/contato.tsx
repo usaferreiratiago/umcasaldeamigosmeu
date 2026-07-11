@@ -104,7 +104,7 @@ function Contato() {
       </div>
 
       <PageHeader
-        eyebrow="— 05 / Contato"
+        eyebrow="— 08 / Contato"
         title="Vamos conversar e compartilhar novas histórias."
         intro="Entre em contato para enviar sugestões, tirar dúvidas, propor parcerias ou simplesmente deixar uma mensagem. Será um prazer falar com você!"
       />
