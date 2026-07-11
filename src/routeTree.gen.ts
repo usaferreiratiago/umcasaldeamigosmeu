@@ -6,7 +6,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
-import { Route as ClientesImport } from './routes/comunidades'
+import { Route as ComunidadesImport } from './routes/comunidades'
 import { Route as ContatoImport } from './routes/contato'
 import { Route as FuncionariosImport } from './routes/funcionarios'
 import { Route as VideosImport } from './routes/videos'
@@ -16,7 +16,7 @@ import { Route as SobreImport } from './routes/sobre'
 const rootRoute = rootRouteImport
 
 const IndexRoute = IndexImport.update({ path: '/', getParentRoute: () => rootRoute } as any)
-const ClientesRoute = ClientesImport.update({ path: '/comunidades', getParentRoute: () => rootRoute } as any)
+const ComunidadesRoute = ComunidadesImport.update({ path: '/comunidades', getParentRoute: () => rootRoute } as any)
 const ContatoRoute = ContatoImport.update({ path: '/contato', getParentRoute: () => rootRoute } as any)
 const FuncionariosRoute = FuncionariosImport.update({ path: '/funcionarios', getParentRoute: () => rootRoute } as any) // ADICIONADO
 const VideosRoute = VideosImport.update({ path: '/videos', getParentRoute: () => rootRoute } as any)
@@ -25,7 +25,7 @@ const SobreRoute = SobreImport.update({ path: '/sobre', getParentRoute: () => ro
 
 export const routeTree = rootRoute._addFileChildren({
   '/': IndexRoute,
-  '/comunidades': ClientesRoute,
+  '/comunidades': ComunidadesRoute,
   '/contato': ContatoRoute,
   '/funcionarios': FuncionariosRoute,
   '/videos': VideosRoute,

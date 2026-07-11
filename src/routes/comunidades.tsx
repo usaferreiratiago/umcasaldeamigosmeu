@@ -9,17 +9,17 @@
 // export const Route = createFileRoute("/comunidades")({
 //   head: () => ({
 //     meta: [
-//       { title: "Clientes — Seno Engenharia" },
+//       { title: "Comunidades — Seno Engenharia" },
 //       {
 //         name: "description",
 //         content:
-//           "Depoimentos de clientes residenciais, comerciais e industriais atendidos pela Seno Engenharia.",
+//           "Depoimentos de Comunidades residenciais, comerciais e industriais atendidos pela Seno Engenharia.",
 //       },
-//       { property: "og:title", content: "Clientes — Seno Engenharia" },
+//       { property: "og:title", content: "Comunidades — Seno Engenharia" },
 //       { property: "og:description", content: "O que dizem de uma obra feita pela Seno." },
 //     ],
 //   }),
-//   component: Clientes,
+//   component: Comunidades,
 // });
 
 // const testimonials = [
@@ -40,7 +40,7 @@
 //   },
 // ];
 
-// function Clientes() {
+// function Comunidades() {
 //   return (
 //     <div className="relative min-h-screen bg-white dark:bg-zinc-950 transition-colors duration-300 w-full overflow-x-hidden">
 //       {/* Barra superior de ações (Voltar + Logo) */}
@@ -72,7 +72,7 @@
 //       </div>
 
 //       <PageHeader
-//         eyebrow="— 04 / Clientes"
+//         eyebrow="— 04 / Comunidades"
 //         title="O que dizem de uma obra da Seno."
 //         intro="Famílias, síndicos e diretores industriais que confiaram suas obras à Seno Engenharia."
 //       />

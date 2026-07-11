@@ -6,7 +6,7 @@ const links = [
   { to: "/sobre", label: "Sobre" },
   { to: "/conteudo", label: "Serviços" },
   { to: "/videos", label: "Obras" },
-  { to: "/comunidades", label: "Clientes" },
+  { to: "/comunidades", label: "Comunidades" },
 ] as const;
 
 export function SiteHeader() {

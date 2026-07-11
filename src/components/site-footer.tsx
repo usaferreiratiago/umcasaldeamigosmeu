@@ -25,7 +25,7 @@ export function SiteFooter() {
               Obras
             </a>
             <a href="/comunidades" className="hover:text-ink">
-              Clientes
+              Comunidades
             </a>
             <a href="/contato" className="hover:text-ink">
               Contato
