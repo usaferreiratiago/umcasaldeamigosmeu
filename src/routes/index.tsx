@@ -62,11 +62,12 @@
 //         <div className="absolute inset-0">
 //           <img
 //             src={heroImg}
-//             alt="Um Casal de Amigos Meu"
+//             alt=""
 //             width={1920}
 //             height={1080}
 //             className="h-full w-full object-cover"
 //           />
+//           {/* Alterado para vazio para evitar o flash de texto no celular */}
 //           {/* Gradiente ajustado para dar contraste ao texto tanto no light quanto no dark */}
 //           <div className="absolute inset-0 bg-linear-to-b from-white/60 via-white/40 to-white dark:from-zinc-950/60 dark:via-zinc-950/40 dark:to-zinc-950" />
 //         </div>
@@ -112,14 +113,6 @@
 //               transition={{ duration: 0.8, delay: 0.25 }}
 //               className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:flex-wrap"
 //             >
-//               {/* <Link
-//                 to="/contato"
-//                 className="group inline-flex w-full items-center justify-center gap-3 rounded-sm border border-blue-600/30 bg-blue-50/50 px-6 py-3.5 text-sm font-medium text-blue-700 transition-all hover:bg-blue-600 hover:text-white dark:border-blue-500/20 dark:bg-blue-950/20 dark:text-blue-400 dark:hover:bg-blue-600 dark:hover:text-white sm:w-auto shadow-md"
-//               >
-//                 Fale conosco
-//                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-//               </Link> */}
-
 //               <Link
 //                 to="https://www.youtube.com/@umcasaldeamigosmeu"
 //                 target="_blank"
@@ -243,7 +236,11 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:image", content: heroImg },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: "/" },
+      // Estratégia 1: Força o navegador a pré-carregar e cachear a imagem principal imediatamente
+      { rel: "preload", as: "image", href: heroImg },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -287,7 +284,6 @@ function Home() {
             height={1080}
             className="h-full w-full object-cover"
           />
-          {/* Alterado para vazio para evitar o flash de texto no celular */}
           {/* Gradiente ajustado para dar contraste ao texto tanto no light quanto no dark */}
           <div className="absolute inset-0 bg-linear-to-b from-white/60 via-white/40 to-white dark:from-zinc-950/60 dark:via-zinc-950/40 dark:to-zinc-950" />
         </div>
@@ -411,6 +407,7 @@ function Home() {
             <Link
               key={c.to}
               to={c.to}
+              preload="intent" // Estratégia 2: Cacheia a página alvo na memória no momento do "toque/hover" do usuário
               className="group flex items-start justify-between gap-6 border-t border-zinc-200 dark:border-zinc-800 pt-8 transition hover:border-zinc-900 dark:hover:border-zinc-50"
             >
               <div>
