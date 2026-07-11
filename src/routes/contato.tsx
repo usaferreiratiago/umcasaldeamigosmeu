@@ -10,6 +10,7 @@ import {
   MessageCircle,
   Linkedin,
   Instagram,
+  Youtube,
   Clock,
 } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
@@ -293,7 +294,6 @@ function Contato() {
                   <Linkedin className="h-4 w-4" />
                   LinkedIn
                 </a>
-
                 {/* Botão: Instagram */}
                 <a
                   href="https://instagram.com/umcasaldeamigosmeu" /* Substitua com o link correto */
@@ -303,6 +303,16 @@ function Contato() {
                 >
                   <Instagram className="h-4 w-4" />
                   Instagram
+                </a>
+                {/* Botão: YouTube */}
+                <a
+                  href="https://youtube.com/umcasaldeamigosmeu" /* Substitua com o link correto */
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex w-full items-center justify-center gap-3 rounded-sm border border-red-600/30 bg-red-50/50 hover:bg-red-600 dark:border-red-500/20 dark:bg-red-950/20 dark:hover:bg-pink-600 px-6 py-3 text-sm font-medium text-red-700 dark:text-red-400 hover:text-white dark:hover:text-white transition-all md:w-auto cursor-pointer"
+                >
+                  <Youtube className="h-4 w-4" />
+                  YouTube
                 </a>
               </div>
             </div>
