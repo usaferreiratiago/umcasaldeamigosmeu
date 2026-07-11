@@ -47,20 +47,6 @@ const allProjects = [
     year: "2026",
     url: "https://www.youtube.com/watch?v=vC1ufViZovI",
   },
-  {
-    youtubeId: "7I2L67_Un8k",
-    title: "Viagem • Madrid, Espanha, Holafly, Wise",
-    type: "Viagem • Madrid, Espanha, Holafly, Wise",
-    year: "2026",
-    url: "https://www.youtube.com/watch?v=7I2L67_Un8k",
-  },
-  {
-    youtubeId: "7I2L67_Un8k",
-    title: "Viagem • Madrid, Espanha, Holafly, Wise",
-    type: "Viagem • Madrid, Espanha, Holafly, Wise",
-    year: "2026",
-    url: "https://www.youtube.com/watch?v=7I2L67_Un8k",
-  },
 ];
 
 const ITEMS_PER_PAGE = 5;
