@@ -74,7 +74,7 @@ function Home() {
           {/* Gradiente ajustado para dar contraste ao texto tanto no light quanto no dark */}
           <div className="absolute inset-0 bg-linear-to-b from-white/60 via-white/40 to-white dark:from-zinc-950/60 dark:via-zinc-950/40 dark:to-zinc-950" />
         </div>
-        {/* <div className="relative mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-7xl items-end px-5 py-16 sm:px-8 sm:py-20 lg:grid lg:grid-cols-12 lg:gap-6 lg:px-10 lg:pb-16 lg:pt-24">
+        <div className="relative mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-7xl items-end px-5 py-16 sm:px-8 sm:py-20 lg:grid lg:grid-cols-12 lg:gap-6 lg:px-10 lg:pb-16 lg:pt-24">
           <div className="w-full lg:col-span-9 lg:flex lg:flex-col lg:justify-end">
             <motion.div
               {...fadeUp}
@@ -123,66 +123,6 @@ function Home() {
                 className="group inline-flex w-full items-center justify-center gap-3 rounded-sm border border-red-600/30 bg-red-50/50 px-6 py-3.5 text-sm font-medium text-red-700 transition-all hover:bg-red-600 hover:text-white dark:border-red-500/20 dark:bg-red-950/20 dark:text-red-400 dark:hover:bg-red-600 dark:hover:text-white sm:w-auto shadow-md"
               >
                 Assistir aos vídeos
-              </Link>
-            </motion.div>
-          </div>
-        </div> */}
-
-        <div className="relative mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl grid-cols-12 gap-6 px-6 pb-16 pt-24 lg:px-10">
-          <div className="col-span-12 flex flex-col justify-end lg:col-span-9">
-            <motion.div
-              {...fadeUp}
-              className="mb-8 inline-flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-zinc-600 dark:text-zinc-400 font-semibold"
-            >
-              <span className="h-px w-10 bg-orange-700 dark:bg-orange-600" />
-              Shirley Ribeiro Paschoal
-            </motion.div>
-
-            <motion.h1
-              {...fadeUp}
-              transition={{
-                duration: 0.9,
-                delay: 0.05,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="font-display text-[clamp(2.75rem,8vw,7rem)] font-medium leading-[0.95] text-zinc-900 dark:text-zinc-50 tracking-tight"
-            >
-              Foco em
-              <br />
-              <span className="italic font-light text-orange-700 dark:text-orange-500">
-                Solidez
-              </span>{" "}
-              &amp; Evolução.
-            </motion.h1>
-
-            <motion.p
-              {...fadeUp}
-              transition={{ duration: 0.8, delay: 0.15 }}
-              className="mt-8 max-w-xl text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg font-medium dark:font-normal"
-            >
-              +15 anos dedicada ao serviço público e em instituições como APAE, Residência Inclusiva
-              e Clínica particular cuidado em saúde mental no Vale do Aço. Psicologia ética e
-              acolhedora, com escuta qualificada e acompanhamento contínuo, promovendo bem-estar
-              emocional e relações mais saudáveis ao longo do tempo.
-            </motion.p>
-
-            <motion.div
-              {...fadeUp}
-              transition={{ duration: 0.8, delay: 0.25 }}
-              className="mt-10 flex flex-wrap gap-4"
-            >
-              <Link
-                to="/contato"
-                className="group inline-flex items-center gap-3 rounded-sm bg-orange-700 dark:bg-orange-600 px-6 py-3.5 text-sm font-medium text-white transition hover:bg-orange-800 dark:hover:bg-orange-500 shadow-md"
-              >
-                Solicitar Consulta
-                <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </Link>
-              <Link
-                to="/portfolio"
-                className="inline-flex items-center gap-3 rounded-sm border border-zinc-900/20 dark:border-zinc-50/20 px-6 py-3.5 text-sm font-medium text-zinc-900 dark:text-zinc-50 transition hover:border-zinc-900 dark:hover:border-zinc-50 hover:bg-zinc-900/5 dark:hover:bg-zinc-50/5"
-              >
-                Ver Portfólio
               </Link>
             </motion.div>
           </div>
