@@ -30,21 +30,21 @@ export const Route = createFileRoute("/videos")({
 // Mock configurado com os IDs reais/exemplos dos vídeos do YouTube
 const allProjects = [
   {
-    youtubeId: "dQw4w9WgXcQ", // Substitua pelo ID do respectivo vídeo do YouTube
+    youtubeId: "v8NRZ5YlPac", // Substitua pelo ID do respectivo vídeo do YouTube
     title: "Conhecendo Madrid",
     type: "Viagem • Madrid, Espanha",
     year: "2026",
     url: "https://www.youtube.com/@umcasaldeamigosmeu",
   },
   {
-    youtubeId: "dQw4w9WgXcQ", // Substitua pelo ID do respectivo vídeo do YouTube
+    youtubeId: "VT1KRDQYKgc", // Substitua pelo ID do respectivo vídeo do YouTube
     title: "Passeio pelo centro histórico",
     type: "Turismo • Espanha",
     year: "2026",
     url: "https://www.youtube.com/@umcasaldeamigosmeu",
   },
   {
-    youtubeId: "dQw4w9WgXcQ", // Substitua pelo ID do respectivo vídeo do YouTube
+    youtubeId: "sFwVYvpM6ac", // Substitua pelo ID do respectivo vídeo do YouTube
     title: "Momentos do nosso dia",
     type: "Vlog",
     year: "2025",
