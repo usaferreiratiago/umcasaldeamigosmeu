@@ -11,16 +11,20 @@ import logoImg from "@/assets/flagspain.jpg";
 export const Route = createFileRoute("/videos")({
   head: () => ({
     meta: [
-      { title: "Vídeos — Seno Engenharia" },
+      { title: "Comunidade — Um Casal de Amigos Meu" },
       {
         name: "description",
         content:
-          "Portfólio de Vídeos residenciais, comerciais e industriais entregues pela Seno Engenharia no Vale do Aço.",
+          "Veja o que os inscritos e seguidores dizem sobre o canal Um Casal de Amigos Meu e acompanhe histórias compartilhadas pela nossa comunidade.",
       },
-      { property: "og:title", content: "Vídeos — Seno Engenharia" },
+      {
+        property: "og:title",
+        content: "Comunidade — Um Casal de Amigos Meu",
+      },
       {
         property: "og:description",
-        content: "Portfólio que se mede em metros quadrados e décadas.",
+        content:
+          "Depoimentos de inscritos e seguidores que acompanham nossas viagens, passeios e aventuras.",
       },
     ],
   }),
