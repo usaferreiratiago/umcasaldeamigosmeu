@@ -9,7 +9,7 @@ import { Route as IndexImport } from './routes/index'
 import { Route as ClientesImport } from './routes/clientes'
 import { Route as ContatoImport } from './routes/contato'
 import { Route as FuncionariosImport } from './routes/funcionarios'
-import { Route as ObrasImport } from './routes/videos'
+import { Route as VideosImport } from './routes/videos'
 import { Route as ServicosImport } from './routes/servicos'
 import { Route as SobreImport } from './routes/sobre'
 
@@ -19,7 +19,7 @@ const IndexRoute = IndexImport.update({ path: '/', getParentRoute: () => rootRou
 const ClientesRoute = ClientesImport.update({ path: '/clientes', getParentRoute: () => rootRoute } as any)
 const ContatoRoute = ContatoImport.update({ path: '/contato', getParentRoute: () => rootRoute } as any)
 const FuncionariosRoute = FuncionariosImport.update({ path: '/funcionarios', getParentRoute: () => rootRoute } as any) // ADICIONADO
-const ObrasRoute = ObrasImport.update({ path: '/videos', getParentRoute: () => rootRoute } as any)
+const ObrasRoute = VideosImport.update({ path: '/videos', getParentRoute: () => rootRoute } as any)
 const ServicosRoute = ServicosImport.update({ path: '/servicos', getParentRoute: () => rootRoute } as any)
 const SobreRoute = SobreImport.update({ path: '/sobre', getParentRoute: () => rootRoute } as any)
 
