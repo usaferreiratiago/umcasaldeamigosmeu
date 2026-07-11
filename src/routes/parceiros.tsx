@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowUpRight, ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, ArrowLeft, Youtube } from "lucide-react";
 import { useState, useEffect } from "react";
 import { PageHeader } from "@/components/page-header";
 
@@ -164,7 +164,7 @@ function VideoRow({
             aria-label="Assistir ao vídeo no YouTube"
             className="group inline-flex items-center justify-center rounded-sm border border-red-600/30 bg-red-50/50 p-2 text-red-700 transition-all hover:bg-red-600 hover:text-white dark:border-red-500/20 dark:bg-red-950/20 dark:text-red-400 dark:hover:bg-red-600 dark:hover:text-white"
           >
-            <ArrowUpRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <Youtube className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
 
           {/* Instagram */}
