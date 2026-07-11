@@ -265,7 +265,7 @@ function Contato() {
                 {/* Botão Principal: Enviar por E-mail */}
                 <button
                   type="submit"
-                  className="group inline-flex w-full items-center justify-center gap-3 rounded-sm bg-orange-900 dark:bg-orange-100 px-6 py-4 text-sm font-medium text-white dark:text-orange-950 transition-colors hover:bg-orange-700 dark:hover:bg-orange-500 dark:hover:text-white md:w-auto shadow-sm cursor-pointer"
+                  className="group inline-flex w-full items-center justify-center gap-3 rounded-sm border border-blue-600/30 bg-blue-50/50 hover:bg-blue-600 dark:border-blue-500/20 dark:bg-blue-950/20 dark:hover:bg-blue-600 px-6 py-3 text-sm font-medium text-blue-700 dark:text-blue-400 hover:text-white dark:hover:text-white transition-all md:w-auto cursor-pointer"
                 >
                   Enviar por e-mail
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
