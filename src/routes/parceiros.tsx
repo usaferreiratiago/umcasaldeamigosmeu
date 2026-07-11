@@ -41,11 +41,11 @@ const allProjects = [
     url: "https://www.youtube.com/watch?v=7I2L67_Un8k",
   },
   {
-    youtubeId: "7I2L67_Un8k",
-    title: "Viagem • Madrid, Espanha, Holafly, Wise",
-    type: "Viagem • Madrid, Espanha, Holafly, Wise",
+    youtubeId: "vC1ufViZovI",
+    title: "Espana Mas",
+    type: "Espana Mas",
     year: "2026",
-    url: "https://www.youtube.com/watch?v=7I2L67_Un8k",
+    url: "https://www.youtube.com/watch?v=vC1ufViZovI",
   },
   {
     youtubeId: "7I2L67_Un8k",
