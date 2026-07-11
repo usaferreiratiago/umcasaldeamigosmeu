@@ -46,6 +46,7 @@ const allProjects = [
     type: "Espana Mas",
     year: "2026",
     url: "https://www.youtube.com/watch?v=vC1ufViZovI",
+    instagram: "https://www.instagram.com/espana_mas",
   },
 ];
 
