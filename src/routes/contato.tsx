@@ -248,7 +248,7 @@ function Contato() {
             </Field>
 
             <Field
-              label="Conte um pouco sobre o que você está vivendo"
+              label="Conte um pouco sobre o que você está buscando"
               error={formState.errors.mensagem?.message}
             >
               <textarea
