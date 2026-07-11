@@ -32,7 +32,7 @@ export function SiteFooter() {
             </a>
           </nav>
           <div className="text-sm text-foreground/70">
-            <div>contato@senoengenharia.com.br</div>
+            <div>contato@umcasaldeamigosmeu.com.br</div>
             <div className="mt-1">(31) 0000-0000</div>
             <div className="mt-3 text-xs text-stone">CNPJ 20.853.842/0001-01</div>
           </div>
