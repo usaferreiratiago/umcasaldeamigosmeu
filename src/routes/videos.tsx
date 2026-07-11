@@ -31,24 +31,27 @@ export const Route = createFileRoute("/videos")({
 const allProjects = [
   {
     youtubeId: "v8NRZ5YlPac",
-    title: "Tour of the Center of Madrid | The best tips for Madrid",
     type: "Viagem • Madrid, Espanha",
     year: "2026",
     url: "https://www.youtube.com/watch?v=v8NRZ5YlPac",
   },
   {
     youtubeId: "VT1KRDQYKgc",
-    title: "ROTEIRO DE 1 DIA EM MADRID | A PÉ | Video Guia de Madrid",
-    type: "Turismo • Espanha",
+    type: "Viagem • Madrid, Espanha",
     year: "2026",
     url: "https://www.youtube.com/watch?v=VT1KRDQYKgc",
   },
   {
     youtubeId: "sFwVYvpM6ac",
-    title: "Visitamos a COSTA BRAVA na ESPANHA | Um paraíso chamado AIGUABLAVA | Férias de Verão",
-    type: "Vlog",
+    type: "Viagem • Madrid, Espanha",
     year: "2025",
     url: "https://www.youtube.com/watch?v=sFwVYvpM6ac",
+  },
+  {
+    youtubeId: "yG9eYr6PgHc",
+    type: "Viagem • Madrid, Espanha",
+    year: "2025",
+    url: "https://www.youtube.com/watch?v=yG9eYr6PgHc",
   },
 ];
 
