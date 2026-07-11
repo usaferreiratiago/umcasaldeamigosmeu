@@ -50,63 +50,24 @@ export const Route = createFileRoute("/videos")({
 const allProjects = [
   {
     images: [p1_f1, p1_f2, p1_f3, p1_f4],
-    title: "Residencial Jardim das Acácias 1",
-    type: "Residencial · Coronel Fabriciano",
+    title: "Conhecendo Madrid",
+    type: "Viagem • Madrid, Espanha",
     year: "2026",
+    url: "https://www.youtube.com/@umcasaldeamigosmeu",
   },
   {
     images: [p2_f1, p2_f2, p2_f3, p2_f4],
-    title: "Edifício Comercial Centro",
-    type: "Comercial · Ipatinga",
+    title: "Passeio pelo centro histórico",
+    type: "Turismo • Espanha",
     year: "2026",
+    url: "https://www.youtube.com/@umcasaldeamigosmeu",
   },
   {
     images: [p3_f1, p3_f2, p3_f3, p3_f4],
-    title: "Galpão Industrial Vale do Aço",
-    type: "Industrial · Timóteo",
+    title: "Momentos do nosso dia",
+    type: "Vlog",
     year: "2025",
-  },
-  {
-    images: [p1_f1, p1_f2, p1_f3, p1_f4],
-    title: "Residencial Horto Classic",
-    type: "Residencial · Ipatinga",
-    year: "2025",
-  },
-  {
-    images: [p2_f1, p2_f2, p2_f3, p2_f4],
-    title: "Centro Logístico Norte",
-    type: "Industrial · Santana do Paraíso",
-    year: "2025",
-  },
-  {
-    images: [p3_f1, p3_f2, p3_f3, p3_f4],
-    title: "Edifício Prime Offices",
-    type: "Comercial · Coronel Fabriciano",
-    year: "2025",
-  },
-  {
-    images: [p1_f1, p1_f2, p1_f3, p1_f4],
-    title: "Condomínio Alphaville Vale",
-    type: "Residencial · Timóteo",
-    year: "2024",
-  },
-  {
-    images: [p2_f1, p2_f2, p2_f3, p2_f4],
-    title: "Clínica Integrada Ipatinga",
-    type: "Comercial · Ipatinga",
-    year: "2024",
-  },
-  {
-    images: [p3_f1, p3_f2, p3_f3, p3_f4],
-    title: "Expansão Industrial Aperam",
-    type: "Industrial · Timóteo",
-    year: "2024",
-  },
-  {
-    images: [p1_f1, p1_f2, p1_f3, p1_f4],
-    title: "Vivendas do Lago",
-    type: "Residencial · Coronel Fabriciano",
-    year: "2024",
+    url: "https://www.youtube.com/@umcasaldeamigosmeu",
   },
 ];
 
@@ -291,13 +252,15 @@ function Videos() {
                     <div className="font-display text-xl sm:text-2xl font-medium text-zinc-400 dark:text-zinc-500 font-mono">
                       {p.year}
                     </div>
-                    <Link
-                      to="/contato"
-                      aria-label="Falar sobre Video similar"
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Assistir ao vídeo"
                       className="p-2 -mr-2"
                     >
                       <ArrowUpRight className="h-6 w-6 text-zinc-800 dark:text-zinc-200 transition hover:text-orange-700 dark:hover:text-orange-500 hover:translate-x-0.5 hover:-translate-y-0.5 transform duration-200" />
-                    </Link>
+                    </a>
                   </div>
                 </motion.div>
               );
