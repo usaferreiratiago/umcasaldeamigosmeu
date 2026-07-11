@@ -71,7 +71,7 @@ function Home() {
           <div className="absolute inset-0 bg-linear-to-b from-white/60 via-white/40 to-white dark:from-zinc-950/60 dark:via-zinc-950/40 dark:to-zinc-950" />
         </div>
 
-        <div className="relative mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl grid-cols-12 gap-6 px-6 pb-16 pt-24 lg:px-10">
+        {/* <div className="relative mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl grid-cols-12 gap-6 px-6 pb-16 pt-24 lg:px-10">
           <div className="col-span-12 flex flex-col justify-end lg:col-span-9">
             <motion.div
               {...fadeUp}
@@ -121,6 +121,67 @@ function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-3 rounded-sm border border-red-600/30 bg-red-50/50 hover:bg-red-600 dark:border-red-500/20 dark:bg-red-950/20 dark:hover:bg-red-600 px-6 py-3.5 text-sm font-medium text-red-700 dark:text-red-400 hover:text-white dark:hover:text-white transition-all shadow-md cursor-pointer"
+              >
+                Assistir aos vídeos
+              </Link>
+            </motion.div>
+          </div>
+        </div> */}
+        <div className="relative mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-7xl items-end px-5 py-16 sm:px-8 sm:py-20 lg:grid lg:grid-cols-12 lg:gap-6 lg:px-10 lg:pb-16 lg:pt-24">
+          <div className="w-full lg:col-span-9 lg:flex lg:flex-col lg:justify-end">
+            <motion.div
+              {...fadeUp}
+              className="mb-6 inline-flex flex-wrap items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-zinc-600 dark:text-zinc-400 sm:text-xs"
+            >
+              <span className="h-px w-8 bg-orange-700 dark:bg-orange-600 sm:w-10" />
+              Desde 2016 · Madrid, Espanha
+            </motion.div>
+
+            <motion.h1
+              {...fadeUp}
+              transition={{
+                duration: 0.9,
+                delay: 0.05,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="font-display text-[clamp(2.3rem,8vw,7rem)] font-medium leading-[0.95] tracking-tight text-zinc-900 dark:text-zinc-50"
+            >
+              Vivendo cada
+              <br />
+              <span className="italic font-light text-orange-700 dark:text-orange-500">
+                momento
+              </span>{" "}
+              &amp; juntos.
+            </motion.h1>
+
+            <motion.p
+              {...fadeUp}
+              transition={{ duration: 0.8, delay: 0.15 }}
+              className="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 sm:mt-8 sm:text-base md:text-lg"
+            >
+              Compartilhamos viagens, passeios, experiências e momentos especiais para inspirar
+              pessoas que gostam de descobrir novos lugares e viver boas histórias ao lado de quem
+              amam.
+            </motion.p>
+
+            <motion.div
+              {...fadeUp}
+              transition={{ duration: 0.8, delay: 0.25 }}
+              className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:flex-wrap"
+            >
+              <Link
+                to="/contato"
+                className="group inline-flex w-full items-center justify-center gap-3 rounded-sm border border-blue-600/30 bg-blue-50/50 px-6 py-3.5 text-sm font-medium text-blue-700 transition-all hover:bg-blue-600 hover:text-white dark:border-blue-500/20 dark:bg-blue-950/20 dark:text-blue-400 dark:hover:bg-blue-600 dark:hover:text-white sm:w-auto shadow-md"
+              >
+                Fale conosco
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
+
+              <Link
+                href="https://www.youtube.com/@umcasaldeamigosmeu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex w-full items-center justify-center gap-3 rounded-sm border border-red-600/30 bg-red-50/50 px-6 py-3.5 text-sm font-medium text-red-700 transition-all hover:bg-red-600 hover:text-white dark:border-red-500/20 dark:bg-red-950/20 dark:text-red-400 dark:hover:bg-red-600 dark:hover:text-white sm:w-auto shadow-md"
               >
                 Assistir aos vídeos
               </Link>
