@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/page-header";
 
 import logoImg from "@/assets/flagspain.jpg";
 
-export const Route = createFileRoute("/comunidades")({
+export const Route = createFileRoute()({
   head: () => ({
     meta: [
       { title: "Comunidade — Um Casal de Amigos Meu" },
@@ -53,7 +53,7 @@ function Comunidade() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8">
         <div className="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-zinc-100 dark:border-zinc-900 pb-6">
           <Link
-            to="/"
+            to=".."
             className="group inline-flex items-center justify-center sm:justify-start gap-2 text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 transition-colors py-2 sm:py-0"
           >
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
