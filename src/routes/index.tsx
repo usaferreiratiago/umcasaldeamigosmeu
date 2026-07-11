@@ -179,7 +179,7 @@ function Home() {
               d: "Veja o que os inscritos dizem sobre o canal.",
             },
             {
-              to: "/funcionarios",
+              to: "/quemsomos",
               n: "05",
               t: "Quem Somos",
               d: "Conheça quem está por trás das câmeras e das histórias.",
