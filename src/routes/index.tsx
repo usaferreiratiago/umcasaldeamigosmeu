@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import heroImg from "@/assets/main_picture/channels4_profile.jpg";
 
 // Rota adicionada explicitamente para resolver o erro do TS
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute()({
   head: () => ({
     meta: [
       { title: "Um Casal de Amigos Meu — Histórias, viagens e momentos inesquecíveis" },
@@ -43,7 +43,7 @@ export const Route = createFileRoute("/")({
             addressLocality: "Madrid",
             addressCountry: "ES",
           },
-          areaServed: "Vale do Aço, Minas Gerais",
+          areaServed: "Madrid, Espanha",
         }),
       },
     ],
@@ -116,14 +116,14 @@ function Home() {
               transition={{ duration: 0.8, delay: 0.25 }}
               className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:flex-wrap"
             >
-              <Link
-                to="https://www.youtube.com/@umcasaldeamigosmeu"
+              <a
+                href="https://www.youtube.com/@umcasaldeamigosmeu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex w-full items-center justify-center gap-3 rounded-sm border border-red-600/30 bg-red-50/50 px-6 py-3.5 text-sm font-medium text-red-700 transition-all hover:bg-red-600 hover:text-white dark:border-red-500/20 dark:bg-red-950/20 dark:text-red-400 dark:hover:bg-red-600 dark:hover:text-white sm:w-auto shadow-md"
               >
                 Assistir aos vídeos
-              </Link>
+              </a>
             </motion.div>
           </div>
         </div>
@@ -208,6 +208,12 @@ function Home() {
               to={c.to}
               preload="intent" // Estratégia 2: Cacheia a página alvo na memória no momento do "toque/hover" do usuário
               className="group flex items-start justify-between gap-6 border-t border-zinc-200 dark:border-zinc-800 pt-8 transition hover:border-zinc-900 dark:hover:border-zinc-50"
+              search={function (current: never): never {
+                throw new Error("Function not implemented.");
+              }}
+              params={function (current: never): never {
+                throw new Error("Function not implemented.");
+              }}
             >
               <div>
                 <div className="text-xs tabular-nums tracking-widest text-zinc-500 dark:text-zinc-400">
