@@ -30,25 +30,25 @@ export const Route = createFileRoute("/videos")({
 // Mock configurado com os IDs reais/exemplos dos vídeos do YouTube
 const allProjects = [
   {
-    youtubeId: "v8NRZ5YlPac", // Substitua pelo ID do respectivo vídeo do YouTube
+    youtubeId: "v8NRZ5YlPac", 
     title: "Conhecendo Madrid",
     type: "Viagem • Madrid, Espanha",
     year: "2026",
-    url: "https://www.youtube.com/@umcasaldeamigosmeu",
+    url: "https://www.youtube.com/watch?v=v8NRZ5YlPac",
   },
   {
-    youtubeId: "VT1KRDQYKgc", // Substitua pelo ID do respectivo vídeo do YouTube
+    youtubeId: "VT1KRDQYKgc", 
     title: "Passeio pelo centro histórico",
     type: "Turismo • Espanha",
     year: "2026",
-    url: "https://www.youtube.com/@umcasaldeamigosmeu",
+    url: "https://www.youtube.com/watch?v=VT1KRDQYKgc",
   },
   {
-    youtubeId: "sFwVYvpM6ac", // Substitua pelo ID do respectivo vídeo do YouTube
+    youtubeId: "sFwVYvpM6ac", 
     title: "Momentos do nosso dia",
     type: "Vlog",
     year: "2025",
-    url: "https://www.youtube.com/@umcasaldeamigosmeu",
+    url: "https://www.youtube.com/watch?v=sFwVYvpM6ac",
   },
 ];
 
