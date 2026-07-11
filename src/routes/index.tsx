@@ -111,14 +111,14 @@ function Home() {
             >
               <Link
                 to="/contato"
-                className="group inline-flex items-center gap-3 rounded-sm bg-orange-700 dark:bg-orange-600 px-6 py-3.5 text-sm font-medium text-white transition hover:bg-orange-800 dark:hover:bg-orange-500 shadow-md"
+                className="group inline-flex w-full items-center justify-center gap-3 rounded-sm border border-blue-600/30 bg-blue-50/50 hover:bg-blue-600 dark:border-blue-500/20 dark:bg-blue-950/20 dark:hover:bg-blue-600 px-6 py-3 text-sm font-medium text-blue-700 dark:text-blue-400 hover:text-white dark:hover:text-white transition-all md:w-auto cursor-pointer"
               >
                 Fale conosco
                 <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
               <Link
                 to="https://www.youtube.com/@umcasaldeamigosmeu"
-                className="inline-flex items-center gap-3 rounded-sm border border-zinc-900/20 dark:border-zinc-50/20 px-6 py-3.5 text-sm font-medium text-zinc-900 dark:text-zinc-50 transition hover:border-zinc-900 dark:hover:border-zinc-50 hover:bg-zinc-900/5 dark:hover:bg-zinc-50/5"
+                className="group inline-flex w-full items-center justify-center gap-3 rounded-sm border border-red-600/30 bg-red-50/50 hover:bg-red-600 dark:border-red-500/20 dark:bg-red-950/20 dark:hover:bg-pink-600 px-6 py-3 text-sm font-medium text-red-700 dark:text-red-400 hover:text-white dark:hover:text-white transition-all md:w-auto cursor-pointer"
               >
                 Assistir aos vídeos
               </Link>
