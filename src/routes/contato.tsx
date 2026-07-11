@@ -306,7 +306,7 @@ function Contato() {
                 </a>
                 {/* Botão: YouTube */}
                 <a
-                  href="https://youtube.com/umcasaldeamigosmeu" /* Substitua com o link correto */
+                  href="https://youtube.com/@umcasaldeamigosmeu" /* Substitua com o link correto */
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex w-full items-center justify-center gap-3 rounded-sm border border-red-600/30 bg-red-50/50 hover:bg-red-600 dark:border-red-500/20 dark:bg-red-950/20 dark:hover:bg-pink-600 px-6 py-3 text-sm font-medium text-red-700 dark:text-red-400 hover:text-white dark:hover:text-white transition-all md:w-auto cursor-pointer"
