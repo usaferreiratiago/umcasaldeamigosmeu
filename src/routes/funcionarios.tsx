@@ -46,8 +46,8 @@ const allStaff = [
   {
     img: f2,
     name: "Amanda",
-    role: "Apresentadora",
-    info: "Participação nos vídeos e aventuras do dia a dia",
+    role: "Criador de Conteúdo",
+    info: "Viagens, passeios e experiências compartilhadas no canal",
     year: "2016",
   },
 ];
