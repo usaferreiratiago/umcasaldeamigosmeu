@@ -7,20 +7,20 @@ import { PageHeader } from "@/components/page-header";
 // Importação da logo utilizando o caminho relativo do projeto
 import logoImg from "@/assets/flagspain.jpg";
 
-// IMPORTS DAS FOTOS ORGANIZADAS POR PASTA DE OBRA
-// Obra 1
+// IMPORTS DAS FOTOS ORGANIZADAS POR PASTA DE Video
+// Video 1
 import p1_f1 from "@/assets/videos/video-1/foto-1.jpg";
 import p1_f2 from "@/assets/videos/video-1/foto-2.jpg";
 import p1_f3 from "@/assets/videos/video-1/foto-3.jpg";
 import p1_f4 from "@/assets/videos/video-1/foto-4.jpg";
 
-// Obra 2
+// Video 2
 import p2_f1 from "@/assets/videos/video-2/foto-1.jpg";
 import p2_f2 from "@/assets/videos/video-2/foto-2.jpg";
 import p2_f3 from "@/assets/videos/video-2/foto-3.jpg";
 import p2_f4 from "@/assets/videos/video-2/foto-4.jpg";
 
-// Obra 3
+// Video 3
 import p3_f1 from "@/assets/videos/video-3/foto-1.jpg";
 import p3_f2 from "@/assets/videos/video-3/foto-2.jpg";
 import p3_f3 from "@/assets/videos/video-3/foto-3.jpg";
@@ -30,20 +30,20 @@ import p3_f4 from "@/assets/videos/video-3/foto-4.jpg";
 export const Route = createFileRoute("/videos")({
   head: () => ({
     meta: [
-      { title: "Obras — Seno Engenharia" },
+      { title: "Videos — Seno Engenharia" },
       {
         name: "description",
         content:
-          "Portfólio de obras residenciais, comerciais e industriais entregues pela Seno Engenharia no Vale do Aço.",
+          "Portfólio de Videos residenciais, comerciais e industriais entregues pela Seno Engenharia no Vale do Aço.",
       },
-      { property: "og:title", content: "Obras — Seno Engenharia" },
+      { property: "og:title", content: "Videos — Seno Engenharia" },
       {
         property: "og:description",
         content: "Portfólio que se mede em metros quadrados e décadas.",
       },
     ],
   }),
-  component: Obras,
+  component: Videos,
 });
 
 // Mock utilizando os arrays de imagens específicos de cada pasta
@@ -199,7 +199,7 @@ function ProjectCarousel({ images, title }: { images: string[]; title: string })
   );
 }
 
-function Obras() {
+function Videos() {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(allProjects.length / ITEMS_PER_PAGE);
 
@@ -243,9 +243,9 @@ function Obras() {
       </div>
 
       <PageHeader
-        eyebrow="— 03 / Obras"
+        eyebrow="— 03 / Videos"
         title="Um portfólio que se mede em metros quadrados e décadas."
-        intro="Uma seleção de nossa história recente. Cada obra carrega o mesmo cuidado técnico, do projeto à última vistoria."
+        intro="Uma seleção de nossa história recente. Cada Video carrega o mesmo cuidado técnico, do projeto à última vistoria."
       />
 
       <section className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-300">
@@ -291,7 +291,7 @@ function Obras() {
                     <div className="font-display text-xl sm:text-2xl font-medium text-zinc-400 dark:text-zinc-500 font-mono">
                       {p.year}
                     </div>
-                    <Link to="/contato" aria-label="Falar sobre obra similar" className="p-2 -mr-2">
+                    <Link to="/contato" aria-label="Falar sobre Video similar" className="p-2 -mr-2">
                       <ArrowUpRight className="h-6 w-6 text-zinc-800 dark:text-zinc-200 transition hover:text-orange-700 dark:hover:text-orange-500 hover:translate-x-0.5 hover:-translate-y-0.5 transform duration-200" />
                     </Link>
                   </div>
@@ -315,7 +315,7 @@ function Obras() {
               <span className="font-semibold text-zinc-900 dark:text-zinc-100">
                 {allProjects.length}
               </span>{" "}
-              obras
+              Videos
             </div>
 
             <div className="flex items-center justify-center gap-2 self-center sm:self-auto overflow-x-auto max-w-full py-1">

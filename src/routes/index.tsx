@@ -121,7 +121,7 @@ function Home() {
               </Link>
 
               <Link
-                href="https://www.youtube.com/@umcasaldeamigosmeu"
+                to="https://www.youtube.com/@umcasaldeamigosmeu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex w-full items-center justify-center gap-3 rounded-sm border border-red-600/30 bg-red-50/50 px-6 py-3.5 text-sm font-medium text-red-700 transition-all hover:bg-red-600 hover:text-white dark:border-red-500/20 dark:bg-red-950/20 dark:text-red-400 dark:hover:bg-red-600 dark:hover:text-white sm:w-auto shadow-md"
