@@ -243,9 +243,9 @@ function Videos() {
       </div>
 
       <PageHeader
-        eyebrow="— 03 / Videos"
-        title="Um portfólio que se mede em metros quadrados e décadas."
-        intro="Uma seleção de nossa história recente. Cada Video carrega o mesmo cuidado técnico, do projeto à última vistoria."
+        eyebrow="— 03 / Vídeos"
+        title="Cada vídeo conta uma nova história."
+        intro="Explore nossas viagens, passeios e experiências compartilhadas com a comunidade. Cada vídeo registra momentos reais, descobertas e memórias inesquecíveis."
       />
 
       <section className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-300">
@@ -291,7 +291,11 @@ function Videos() {
                     <div className="font-display text-xl sm:text-2xl font-medium text-zinc-400 dark:text-zinc-500 font-mono">
                       {p.year}
                     </div>
-                    <Link to="/contato" aria-label="Falar sobre Video similar" className="p-2 -mr-2">
+                    <Link
+                      to="/contato"
+                      aria-label="Falar sobre Video similar"
+                      className="p-2 -mr-2"
+                    >
                       <ArrowUpRight className="h-6 w-6 text-zinc-800 dark:text-zinc-200 transition hover:text-orange-700 dark:hover:text-orange-500 hover:translate-x-0.5 hover:-translate-y-0.5 transform duration-200" />
                     </Link>
                   </div>
