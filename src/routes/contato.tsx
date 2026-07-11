@@ -96,7 +96,7 @@
 //           >
 //             <img
 //               src={logoImg}
-//               alt="Seno Engenharia Logo"
+//               alt="Um Casal de Amigos Meu Logo"
 //               className="h-10 sm:h-12 w-auto object-contain transition-all duration-300 dark:brightness-110 dark:contrast-105"
 //             />
 //           </motion.div>
@@ -440,7 +440,7 @@ function Contato() {
           >
             <img
               src={logoImg}
-              alt="Seno Engenharia Logo"
+              alt="Um Casal de Amigos Meu Logo"
               className="w-full max-w-40 sm:max-w-50 md:max-w-60 h-auto object-contain transition-all duration-300 dark:brightness-110 dark:contrast-105"
             />
           </motion.div>

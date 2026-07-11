@@ -63,7 +63,7 @@ export const Route = createRootRouteWithContext<{
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Seno Engenharia" },
+      { title: "Um Casal de Amigos Meu" },
       { name: "description", content: "Engenharia e construção no Vale do Aço" },
     ],
   }),

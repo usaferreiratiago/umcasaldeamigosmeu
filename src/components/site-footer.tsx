@@ -38,7 +38,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-10 text-xs text-stone">
-          © {new Date().getFullYear()} Seno Engenharia Projetos Construções LTDA — ME.
+          © {new Date().getFullYear()} Um Casal de Amigos Meu Projetos Construções LTDA — ME.
         </div>
       </div>
     </footer>
