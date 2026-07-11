@@ -196,6 +196,12 @@ function Home() {
               t: "Parceiros",
               d: "Conheça nossos parceiros e colaboradores.",
             },
+            {
+              to: "/dicas",
+              n: "08",
+              t: "Dicas",
+              d: "Conheça nossas dicas importantes",
+            },
           ].map((c) => (
             <Link
               key={c.to}

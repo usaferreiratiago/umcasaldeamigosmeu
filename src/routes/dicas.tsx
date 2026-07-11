@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
@@ -28,7 +29,7 @@ export const Route = createFileRoute("/dicas")({
       },
     ],
   }),
-  component: Dicas,
+  component: dicas,
 });
 
 // Mock configurado com os IDs dos vídeos (os títulos servem como fallback inicial)
