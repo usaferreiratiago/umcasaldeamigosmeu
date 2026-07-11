@@ -164,10 +164,10 @@ function Contato() {
                 />
                 <div className="min-w-0">
                   <div className="text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400 font-semibold">
-                    Horario de apertura
+                    Horário de funcionamento
                   </div>
                   <div className="mt-1 font-display text-base sm:text-lg text-zinc-900 dark:text-zinc-200 space-y-0.5">
-                    <p>lunes a viernes: de 8:00 a 17:00.</p>
+                    <p>Segunda a Sexta: 08:00h às 17:00h</p>
                   </div>
                 </div>
               </div>
