@@ -24,7 +24,7 @@ export function SiteFooter() {
             <a href="/videos" className="hover:text-ink">
               Obras
             </a>
-            <a href="/clientes" className="hover:text-ink">
+            <a href="/comunidades" className="hover:text-ink">
               Clientes
             </a>
             <a href="/contato" className="hover:text-ink">

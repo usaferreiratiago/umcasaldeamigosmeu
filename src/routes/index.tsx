@@ -173,7 +173,7 @@ function Home() {
               d: "Explore nossas viagens, passeios e momentos marcantes.",
             },
             {
-              to: "/clientes",
+              to: "/comunidades",
               n: "04",
               t: "Comunidade",
               d: "Veja o que os inscritos dizem sobre o canal.",
