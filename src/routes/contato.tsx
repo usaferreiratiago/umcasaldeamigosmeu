@@ -105,8 +105,8 @@ function Contato() {
 
       <PageHeader
         eyebrow="— 05 / Contato"
-        title="Está buscando apoio psicológico? Vamos conversar."
-        intro="Conte um pouco sobre o que você está vivendo. Respondemos em até dois dias úteis."
+        title="Vamos conversar e compartilhar novas histórias."
+        intro="Entre em contato para enviar sugestões, tirar dúvidas, propor parcerias ou simplesmente deixar uma mensagem. Será um prazer falar com você!"
       />
 
       <section className="py-12 sm:py-16 lg:py-24">
