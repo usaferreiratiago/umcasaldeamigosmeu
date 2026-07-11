@@ -38,38 +38,17 @@ export const Route = createFileRoute("/equipe")({
 const allStaff = [
   {
     img: f1,
-    name: "Tiago",
+    name: "Felipe",
     role: "Criador de Conteúdo",
     info: "Viagens, passeios e experiências compartilhadas no canal",
     year: "2016",
   },
   {
     img: f2,
-    name: "Companheira de Jornada",
+    name: "Amanda",
     role: "Apresentadora",
     info: "Participação nos vídeos e aventuras do dia a dia",
     year: "2016",
-  },
-  {
-    img: f3,
-    name: "Explorador de Destinos",
-    role: "Produção",
-    info: "Planejamento de roteiros e experiências",
-    year: "2018",
-  },
-  {
-    img: f4,
-    name: "Contador de Histórias",
-    role: "Edição",
-    info: "Transformando momentos em vídeos memoráveis",
-    year: "2019",
-  },
-  {
-    img: f5,
-    name: "Comunidade",
-    role: "Inscritos",
-    info: "A razão pela qual o canal continua crescendo",
-    year: "Sempre",
   },
 ];
 
