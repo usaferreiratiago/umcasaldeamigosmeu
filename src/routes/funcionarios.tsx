@@ -18,71 +18,64 @@ import logoImg from "@/assets/flagspain.jpg";
 export const Route = createFileRoute("/equipe")({
   head: () => ({
     meta: [
-      { title: "Equipe — Seno Engenharia" },
+      { title: "Quem Somos — Um Casal de Amigos Meu" },
       {
         name: "description",
         content:
-          "Conheça o corpo técnico e os diretores responsáveis pela excelência operacional da Seno Engenharia no Vale do Aço.",
+          "Conheça as pessoas por trás do canal Um Casal de Amigos Meu e acompanhe nossa história, experiências e aventuras.",
       },
-      { property: "og:title", content: "Equipe técnica — Seno Engenharia" },
+      { property: "og:title", content: "Quem Somos — Um Casal de Amigos Meu" },
       {
         property: "og:description",
-        content: "Profissionais experientes construindo o futuro da região.",
+        content: "As pessoas que compartilham histórias, viagens e experiências com você.",
       },
     ],
   }),
-  component: Funcionarios,
+  component: Equipe,
 });
 
 // Mock com a lista de funcionários
 const allStaff = [
   {
     img: f1,
-    name: "Gerson",
-    role: "Diretor(a) Executivo",
-    info: "CEO & Fundador(a) · Especialista em Estruturas",
-    year: "1986",
+    name: "Tiago",
+    role: "Criador de Conteúdo",
+    info: "Viagens, passeios e experiências compartilhadas no canal",
+    year: "2016",
   },
   {
     img: f2,
-    name: "Cláudio Almeida",
-    role: "Diretor(a) de Engenharia",
-    info: "Gerenciamento de Obras Industriais",
-    year: "1998",
+    name: "Companheira de Jornada",
+    role: "Apresentadora",
+    info: "Participação nos vídeos e aventuras do dia a dia",
+    year: "2016",
   },
   {
     img: f3,
-    name: "Mariana Souza",
-    role: "Coordenador(a) de Projetos",
-    info: "Arquitetura & Design Executivo",
-    year: "2015",
-  },
-  {
-    img: f4,
-    name: "Rodrigo Costa",
-    role: "Engenheiro(a) de Campo",
-    info: "Fiscalização e Controle de Qualidade",
+    name: "Explorador de Destinos",
+    role: "Produção",
+    info: "Planejamento de roteiros e experiências",
     year: "2018",
   },
   {
-    img: f5,
-    name: "Ana Beatriz Lima",
-    role: "Gestor(a) Administrativa",
-    info: "Planejamento e Controladoria Geral",
-    year: "2012",
+    img: f4,
+    name: "Contador de Histórias",
+    role: "Edição",
+    info: "Transformando momentos em vídeos memoráveis",
+    year: "2019",
   },
   {
-    img: f3,
-    name: "Marta Souza",
-    role: "Técnico(a) em Edificações",
-    info: "Desenho Técnico e Levantamentos",
-    year: "2021",
+    img: f5,
+    name: "Comunidade",
+    role: "Inscritos",
+    info: "A razão pela qual o canal continua crescendo",
+    year: "Sempre",
   },
 ];
 
 const ITEMS_PER_PAGE = 5;
 
-function Funcionarios() {
+function Equipe() {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(allStaff.length / ITEMS_PER_PAGE);
 
@@ -121,7 +114,7 @@ function Funcionarios() {
           >
             <img
               src={logoImg}
-              alt="Seno Engenharia Logo"
+              alt="Um Casal de Amigos Meu"
               className="h-10 sm:h-12 w-auto object-contain transition-all duration-300 dark:brightness-110 dark:contrast-105"
             />
           </motion.div>
@@ -129,9 +122,9 @@ function Funcionarios() {
       </div>
 
       <PageHeader
-        eyebrow="— Nossa Equipe"
-        title="O capital humano por trás de cada m² construído."
-        intro="Profissionais de engenharia, arquitetura e gerenciamento focados em transformar riscos no papel em estruturas definitivas."
+        eyebrow="— Quem Somos"
+        title="As pessoas por trás das histórias e aventuras."
+        intro="Conheça quem participa da criação dos conteúdos, viagens, passeios e experiências compartilhadas no canal Um Casal de Amigos Meu."
       />
 
       <section className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-300">
@@ -150,12 +143,12 @@ function Funcionarios() {
                   transition={{ duration: 0.5, delay: i * 0.05 }}
                   className="grid grid-cols-12 items-center gap-4 sm:gap-6 bg-white dark:bg-zinc-950 py-6 sm:py-8 border-b border-zinc-100 dark:border-zinc-900 last:border-0"
                 >
-                  {/* Imagem do Colaborador */}
+                  {/* Imagem do participante */}
                   <div className="col-span-12 md:col-span-5">
                     <div className="overflow-hidden rounded-sm bg-zinc-100 dark:bg-zinc-900">
                       <img
                         src={f.img}
-                        alt={`Foto de ${f.name}`}
+                        alt={`${f.name} - Um Casal de Amigos Meu`}
                         loading="lazy"
                         className="aspect-4/3 w-full object-cover transition duration-500 transform hover:scale-[1.03]"
                       />
@@ -208,7 +201,7 @@ function Funcionarios() {
               <span className="font-semibold text-zinc-900 dark:text-zinc-100">
                 {allStaff.length}
               </span>{" "}
-              colaboradores
+              participantes
             </div>
 
             <div className="flex items-center justify-center gap-2 self-center sm:self-auto overflow-x-auto max-w-full py-1">
