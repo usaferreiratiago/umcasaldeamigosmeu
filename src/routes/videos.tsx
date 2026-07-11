@@ -9,25 +9,25 @@ import logoImg from "@/assets/flagspain.jpg";
 
 // IMPORTS DAS FOTOS ORGANIZADAS POR PASTA DE OBRA
 // Obra 1
-import p1_f1 from "@/assets/obras/projeto-1/foto-1.jpg";
-import p1_f2 from "@/assets/obras/projeto-1/foto-2.jpg";
-import p1_f3 from "@/assets/obras/projeto-1/foto-3.jpg";
-import p1_f4 from "@/assets/obras/projeto-1/foto-4.jpg";
+import p1_f1 from "@/assets/videos/projeto-1/foto-1.jpg";
+import p1_f2 from "@/assets/videos/projeto-1/foto-2.jpg";
+import p1_f3 from "@/assets/videos/projeto-1/foto-3.jpg";
+import p1_f4 from "@/assets/videos/projeto-1/foto-4.jpg";
 
 // Obra 2
-import p2_f1 from "@/assets/obras/projeto-2/foto-1.jpg";
-import p2_f2 from "@/assets/obras/projeto-2/foto-2.jpg";
-import p2_f3 from "@/assets/obras/projeto-2/foto-3.jpg";
-import p2_f4 from "@/assets/obras/projeto-2/foto-4.jpg";
+import p2_f1 from "@/assets/videos/projeto-2/foto-1.jpg";
+import p2_f2 from "@/assets/videos/projeto-2/foto-2.jpg";
+import p2_f3 from "@/assets/videos/projeto-2/foto-3.jpg";
+import p2_f4 from "@/assets/videos/projeto-2/foto-4.jpg";
 
 // Obra 3
-import p3_f1 from "@/assets/obras/projeto-3/foto-1.jpg";
-import p3_f2 from "@/assets/obras/projeto-3/foto-2.jpg";
-import p3_f3 from "@/assets/obras/projeto-3/foto-3.jpg";
-import p3_f4 from "@/assets/obras/projeto-3/foto-4.jpg";
+import p3_f1 from "@/assets/videos/projeto-3/foto-1.jpg";
+import p3_f2 from "@/assets/videos/projeto-3/foto-2.jpg";
+import p3_f3 from "@/assets/videos/projeto-3/foto-3.jpg";
+import p3_f4 from "@/assets/videos/projeto-3/foto-4.jpg";
 
 // Rota adicionada explicitamente para resolver o erro do TS
-export const Route = createFileRoute("/obras")({
+export const Route = createFileRoute("/videos")({
   head: () => ({
     meta: [
       { title: "Obras — Seno Engenharia" },
