@@ -34,32 +34,32 @@ export const Route = createFileRoute("/parceiros")({
 // Mock configurado com os IDs dos vídeos (os títulos servem como fallback inicial)
 const allProjects = [
   {
-    youtubeId: "v8NRZ5YlPac",
-    title: "Viagem • Madrid, Espanha",
+    youtubeId: "7I2L67_Un8k",
+    title: "Viagem • Madrid, Espanha, Holafly, Wise",
     type: "Viagem • Madrid, Espanha",
     year: "2026",
-    url: "https://www.youtube.com/watch?v=v8NRZ5YlPac",
+    url: "https://www.youtube.com/watch?v=7I2L67_Un8k",
   },
   {
-    youtubeId: "VT1KRDQYKgc",
-    title: "Viagem • Madrid, Espanha",
+    youtubeId: "7I2L67_Un8k",
+    title: "Viagem • Madrid, Espanha, Holafly, Wise",
     type: "Viagem • Madrid, Espanha",
     year: "2026",
-    url: "https://www.youtube.com/watch?v=VT1KRDQYKgc",
+    url: "https://www.youtube.com/watch?v=7I2L67_Un8k",
   },
   {
-    youtubeId: "sFwVYvpM6ac",
-    title: "Viagem • Madrid, Espanha",
+    youtubeId: "7I2L67_Un8k",
+    title: "Viagem • Madrid, Espanha, Holafly, Wise",
     type: "Viagem • Madrid, Espanha",
-    year: "2025",
-    url: "https://www.youtube.com/watch?v=sFwVYvpM6ac",
+    year: "2026",
+    url: "https://www.youtube.com/watch?v=7I2L67_Un8k",
   },
   {
-    youtubeId: "yG9eYr6PgHc",
-    title: "Viagem • Madrid, Espanha",
+    youtubeId: "7I2L67_Un8k",
+    title: "Viagem • Madrid, Espanha, Holafly, Wise",
     type: "Viagem • Madrid, Espanha",
-    year: "2025",
-    url: "https://www.youtube.com/watch?v=yG9eYr6PgHc",
+    year: "2026",
+    url: "https://www.youtube.com/watch?v=7I2L67_Un8k",
   },
 ];
 
