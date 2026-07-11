@@ -161,32 +161,32 @@ function Home() {
             {
               to: "/servicos",
               n: "02",
-              t: "Serviços",
-              d: "Projetos, construção, reformas e gerenciamento de obras.",
+              t: "Conteúdo",
+              d: "Conheça os temas, aventuras e experiências compartilhadas no canal.",
             },
             {
               to: "/obras",
               n: "03",
-              t: "Obras",
-              d: "Portfólio residencial, comercial e industrial.",
+              t: "Vídeos",
+              d: "Explore nossas viagens, passeios e momentos marcantes.",
             },
             {
               to: "/clientes",
               n: "04",
-              t: "Clientes",
-              d: "O que dizem de uma obra feita pela Seno.",
+              t: "Comunidade",
+              d: "Veja o que os inscritos dizem sobre o canal.",
             },
             {
               to: "/funcionarios",
               n: "05",
-              t: "Funcionários",
-              d: "Conheça a equipe por trás das obras da Um casal de amigos meu.",
+              t: "Quem Somos",
+              d: "Conheça quem está por trás das câmeras e das histórias.",
             },
             {
               to: "/contato",
               n: "06",
               t: "Contato",
-              d: "Entre em contato conosco para mais informações.",
+              d: "Entre em contato para parcerias, sugestões ou para falar conosco.",
             },
           ].map((c) => (
             <Link
