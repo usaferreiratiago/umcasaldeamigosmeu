@@ -70,63 +70,6 @@ function Home() {
           {/* Gradiente ajustado para dar contraste ao texto tanto no light quanto no dark */}
           <div className="absolute inset-0 bg-linear-to-b from-white/60 via-white/40 to-white dark:from-zinc-950/60 dark:via-zinc-950/40 dark:to-zinc-950" />
         </div>
-
-        {/* <div className="relative mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl grid-cols-12 gap-6 px-6 pb-16 pt-24 lg:px-10">
-          <div className="col-span-12 flex flex-col justify-end lg:col-span-9">
-            <motion.div
-              {...fadeUp}
-              className="mb-8 inline-flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-zinc-600 dark:text-zinc-400 font-semibold"
-            >
-              <span className="h-px w-10 bg-orange-700 dark:bg-orange-600" />
-              Desde 2016 · Madrid, Espanha
-            </motion.div>
-
-            <motion.h1
-              {...fadeUp}
-              transition={{ duration: 0.9, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
-              className="font-display text-[clamp(2.75rem,8vw,7rem)] font-medium leading-[0.95] text-zinc-900 dark:text-zinc-50 tracking-tight"
-            >
-              Vivendo cada
-              <br />
-              <span className="italic font-light text-orange-700 dark:text-orange-500">
-                momento
-              </span>{" "}
-              &amp; juntos.
-            </motion.h1>
-
-            <motion.p
-              {...fadeUp}
-              transition={{ duration: 0.8, delay: 0.15 }}
-              className="mt-8 max-w-xl text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg font-medium dark:font-normal"
-            >
-              Compartilhamos viagens, passeios, experiências e momentos especiais para inspirar
-              pessoas que gostam de descobrir novos lugares e viver boas histórias ao lado de quem
-              amam.
-            </motion.p>
-
-            <motion.div
-              {...fadeUp}
-              transition={{ duration: 0.8, delay: 0.25 }}
-              className="mt-10 flex flex-wrap gap-4"
-            >
-              <Link
-                to="/contato"
-                className="group inline-flex items-center justify-center gap-3 rounded-sm border border-blue-600/30 bg-blue-50/50 hover:bg-blue-600 dark:border-blue-500/20 dark:bg-blue-950/20 dark:hover:bg-blue-600 px-6 py-3.5 text-sm font-medium text-blue-700 dark:text-blue-400 hover:text-white dark:hover:text-white transition-all shadow-md cursor-pointer"
-              >
-                Fale conosco
-                <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </Link>
-              <Link
-                href="https://www.youtube.com/@umcasaldeamigosmeu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-3 rounded-sm border border-red-600/30 bg-red-50/50 hover:bg-red-600 dark:border-red-500/20 dark:bg-red-950/20 dark:hover:bg-red-600 px-6 py-3.5 text-sm font-medium text-red-700 dark:text-red-400 hover:text-white dark:hover:text-white transition-all shadow-md cursor-pointer"
-              >
-                Assistir aos vídeos
-              </Link>
-            </motion.div>
-          </div>
-        </div> */}
         <div className="relative mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-7xl items-end px-5 py-16 sm:px-8 sm:py-20 lg:grid lg:grid-cols-12 lg:gap-6 lg:px-10 lg:pb-16 lg:pt-24">
           <div className="w-full lg:col-span-9 lg:flex lg:flex-col lg:justify-end">
             <motion.div
