@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { PageHeader } from "@/components/page-header";
 
 // Importação da logo utilizando o caminho relativo do projeto
@@ -27,24 +27,24 @@ export const Route = createFileRoute("/videos")({
   component: Videos,
 });
 
-// Mock configurado com os IDs reais/exemplos dos vídeos do YouTube
+// Mock configurado com os IDs dos vídeos (os títulos servem como fallback inicial)
 const allProjects = [
   {
-    youtubeId: "v8NRZ5YlPac", 
+    youtubeId: "v8NRZ5YlPac",
     title: "Tour of the Center of Madrid | The best tips for Madrid",
     type: "Viagem • Madrid, Espanha",
     year: "2026",
     url: "https://www.youtube.com/watch?v=v8NRZ5YlPac",
   },
   {
-    youtubeId: "VT1KRDQYKgc", 
+    youtubeId: "VT1KRDQYKgc",
     title: "ROTEIRO DE 1 DIA EM MADRID | A PÉ | Video Guia de Madrid",
     type: "Turismo • Espanha",
     year: "2026",
     url: "https://www.youtube.com/watch?v=VT1KRDQYKgc",
   },
   {
-    youtubeId: "sFwVYvpM6ac", 
+    youtubeId: "sFwVYvpM6ac",
     title: "Visitamos a COSTA BRAVA na ESPANHA | Um paraíso chamado AIGUABLAVA | Férias de Verão",
     type: "Vlog",
     year: "2025",
@@ -53,6 +53,104 @@ const allProjects = [
 ];
 
 const ITEMS_PER_PAGE = 5;
+
+// Subcomponente isolado para gerenciar a requisição e o estado do título de cada vídeo
+interface VideoProject {
+  youtubeId: string;
+  title: string;
+  type: string;
+  year: string;
+  url: string;
+}
+
+function VideoRow({
+  project,
+  formattedIndex,
+}: {
+  project: VideoProject;
+  formattedIndex: string | number;
+}) {
+  const [displayTitle, setDisplayTitle] = useState(project.title);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const fetchAutomaticTitle = async () => {
+      try {
+        // Faz a chamada para o oEmbed do YouTube sem problemas de CORS no navegador
+        const response = await fetch(
+          `https://noembed.com/embed?url=https://www.youtube.com/watch?v=${project.youtubeId}`,
+        );
+        const data = await response.json();
+
+        if (isMounted && data && data.title) {
+          setDisplayTitle(data.title);
+        }
+      } catch (error) {
+        console.error(`Erro ao buscar o título para o ID ${project.youtubeId}:`, error);
+        // Em caso de erro, mantém o título estático definido no array (fallback)
+      }
+    };
+
+    fetchAutomaticTitle();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [project.youtubeId]);
+
+  return (
+    <div className="grid grid-cols-12 items-center gap-4 sm:gap-6 bg-white dark:bg-zinc-950 py-6 sm:py-8 border-b border-zinc-100 dark:border-zinc-900 last:border-0">
+      {/* Coluna do Player do YouTube Responsivo (16:9) */}
+      <div className="col-span-12 md:col-span-5">
+        <div className="w-full aspect-video rounded-sm overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xs">
+          <iframe
+            width="100%"
+            height="100%"
+            src={`https://www.youtube.com/embed/${project.youtubeId}`}
+            title={displayTitle}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="w-full h-full border-0"
+          />
+        </div>
+      </div>
+
+      {/* Coluna do Número */}
+      <div className="col-span-3 md:col-span-1 order-1 md:order-0 mt-2 md:mt-0">
+        <div className="text-xs tabular-nums tracking-widest text-zinc-400 dark:text-zinc-500 font-mono font-semibold">
+          {formattedIndex}
+        </div>
+      </div>
+
+      {/* Coluna do Título e Tipo */}
+      <div className="col-span-12 md:col-span-4 mt-2 md:mt-0">
+        <h3 className="font-display text-xl sm:text-2xl font-semibold text-zinc-900 dark:text-zinc-100 md:text-3xl tracking-tight">
+          {displayTitle}
+        </h3>
+        <div className="mt-1 sm:mt-2 text-sm text-zinc-500 dark:text-zinc-400 font-medium dark:font-normal">
+          {project.type}
+        </div>
+      </div>
+
+      {/* Coluna do Ano e Link */}
+      <div className="col-span-9 md:col-span-2 flex items-center justify-between gap-4 order-2 md:order-0 mt-2 md:mt-0 justify-self-end md:justify-self-auto w-full md:w-auto">
+        <div className="font-display text-xl sm:text-2xl font-medium text-zinc-400 dark:text-zinc-500 font-mono">
+          {project.year}
+        </div>
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Assistir ao vídeo no YouTube"
+          className="p-2 -mr-2"
+        >
+          <ArrowUpRight className="h-6 w-6 text-zinc-800 dark:text-zinc-200 transition hover:text-orange-700 dark:hover:text-orange-500 hover:translate-x-0.5 hover:-translate-y-0.5 transform duration-200" />
+        </a>
+      </div>
+    </div>
+  );
+}
 
 function Videos() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -112,60 +210,13 @@ function Videos() {
 
               return (
                 <motion.div
-                  key={`${p.title}-${globalIndex}`}
+                  key={`${p.youtubeId}-${globalIndex}`} // Chave alterada para youtubeId visto que o título é dinâmico
                   initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.05 }}
-                  className="grid grid-cols-12 items-center gap-4 sm:gap-6 bg-white dark:bg-zinc-950 py-6 sm:py-8 border-b border-zinc-100 dark:border-zinc-900 last:border-0"
                 >
-                  {/* Coluna do Player do YouTube Responsivo (16:9) */}
-                  <div className="col-span-12 md:col-span-5">
-                    <div className="w-full aspect-video rounded-sm overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xs">
-                      <iframe
-                        width="100%"
-                        height="100%"
-                        src={`https://www.youtube.com/embed/${p.youtubeId}`}
-                        title={p.title}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
-                        className="w-full h-full border-0"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Coluna do Número */}
-                  <div className="col-span-3 md:col-span-1 order-1 md:order-0 mt-2 md:mt-0">
-                    <div className="text-xs tabular-nums tracking-widest text-zinc-400 dark:text-zinc-500 font-mono font-semibold">
-                      {formattedIndex}
-                    </div>
-                  </div>
-
-                  {/* Coluna do Título e Tipo */}
-                  <div className="col-span-12 md:col-span-4 mt-2 md:mt-0">
-                    <h3 className="font-display text-xl sm:text-2xl font-semibold text-zinc-900 dark:text-zinc-100 md:text-3xl tracking-tight">
-                      {p.title}
-                    </h3>
-                    <div className="mt-1 sm:mt-2 text-sm text-zinc-500 dark:text-zinc-400 font-medium dark:font-normal">
-                      {p.type}
-                    </div>
-                  </div>
-
-                  {/* Coluna do Ano e Link */}
-                  <div className="col-span-9 md:col-span-2 flex items-center justify-between gap-4 order-2 md:order-0 mt-2 md:mt-0 justify-self-end md:justify-self-auto w-full md:w-auto">
-                    <div className="font-display text-xl sm:text-2xl font-medium text-zinc-400 dark:text-zinc-500 font-mono">
-                      {p.year}
-                    </div>
-                    <a
-                      href={p.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Assistir ao vídeo no YouTube"
-                      className="p-2 -mr-2"
-                    >
-                      <ArrowUpRight className="h-6 w-6 text-zinc-800 dark:text-zinc-200 transition hover:text-orange-700 dark:hover:text-orange-500 hover:translate-x-0.5 hover:-translate-y-0.5 transform duration-200" />
-                    </a>
-                  </div>
+                  <VideoRow project={p} formattedIndex={formattedIndex} />
                 </motion.div>
               );
             })}
