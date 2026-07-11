@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { PageHeader } from "@/components/page-header";
 
 // Importação da logo utilizando o caminho relativo do projeto
-import logoImg from "@/assets/senoengenharia.png";
+import logoImg from "@/assets/flagspain.jpg";
 
 // IMPORTS DAS FOTOS ORGANIZADAS POR PASTA DE OBRA
 // Obra 1

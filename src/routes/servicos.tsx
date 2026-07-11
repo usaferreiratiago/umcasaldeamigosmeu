@@ -12,7 +12,7 @@ import {
 import { PageHeader } from "@/components/page-header";
 
 // Importação da logo utilizando o caminho relativo do projeto
-import logoImg from "@/assets/senoengenharia.png";
+import logoImg from "@/assets/flagspain.jpg";
 
 // Rota adicionada explicitamente para resolver o erro do TS
 export const Route = createFileRoute("/servicos")({
