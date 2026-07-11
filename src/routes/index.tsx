@@ -117,7 +117,9 @@ function Home() {
                 <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
               <Link
-                to="https://www.youtube.com/@umcasaldeamigosmeu"
+                href="https://www.youtube.com/@umcasaldeamigosmeu"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-3 rounded-sm border border-red-600/30 bg-red-50/50 hover:bg-red-600 dark:border-red-500/20 dark:bg-red-950/20 dark:hover:bg-red-600 px-6 py-3.5 text-sm font-medium text-red-700 dark:text-red-400 hover:text-white dark:hover:text-white transition-all shadow-md cursor-pointer"
               >
                 Assistir aos vídeos
