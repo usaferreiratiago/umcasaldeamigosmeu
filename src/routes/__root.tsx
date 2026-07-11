@@ -64,7 +64,7 @@ export const Route = createRootRouteWithContext<{
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Um Casal de Amigos Meu" },
-      { name: "description", content: "Engenharia e construção no Vale do Aço" },
+      { name: "description", content: "Viagens, passeios e experiências compartilhadas no canal" },
     ],
   }),
   component: RootComponent,
