@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/page-header";
 
 import logoImg from "@/assets/flagspain.jpg";
 
-export const Route = createFileRoute("/servicos")({
+export const Route = createFileRoute("/conteudo")({
   head: () => ({
     meta: [
       { title: "Conteúdo — Um Casal de Amigos Meu" },
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/servicos")({
       },
     ],
   }),
-  component: Servicos,
+  component: conteudo,
 });
 
 const services = [
@@ -61,7 +61,7 @@ const services = [
   },
 ];
 
-function Servicos() {
+function conteudo() {
   return (
     <div className="relative min-h-screen bg-white dark:bg-zinc-950 transition-colors duration-300 w-full overflow-x-hidden">
       {/* Barra superior */}

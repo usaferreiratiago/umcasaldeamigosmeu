@@ -161,7 +161,7 @@ function Home() {
               d: "Conheça a história do canal e como essa jornada começou.",
             },
             {
-              to: "/servicos",
+              to: "/conteudo",
               n: "02",
               t: "Conteúdo",
               d: "Conheça os temas, aventuras e experiências compartilhadas no canal.",

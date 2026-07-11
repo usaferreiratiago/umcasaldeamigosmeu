@@ -18,7 +18,7 @@ export function SiteFooter() {
             <a href="/sobre" className="hover:text-ink">
               Sobre
             </a>
-            <a href="/servicos" className="hover:text-ink">
+            <a href="/conteudo" className="hover:text-ink">
               Serviços
             </a>
             <a href="/videos" className="hover:text-ink">
