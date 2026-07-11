@@ -99,8 +99,9 @@ function Home() {
               transition={{ duration: 0.8, delay: 0.15 }}
               className="mt-8 max-w-xl text-base leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-lg font-medium dark:font-normal"
             >
-              Quatro décadas projetando e executando obras residenciais, comerciais e industriais no
-              Vale do Aço. Engenharia honesta, prazos cumpridos, obras que envelhecem bem.
+              Compartilhamos viagens, passeios, experiências e momentos especiais para inspirar
+              pessoas que gostam de descobrir novos lugares e viver boas histórias ao lado de quem
+              amam.
             </motion.p>
 
             <motion.div
@@ -112,14 +113,14 @@ function Home() {
                 to="/contato"
                 className="group inline-flex items-center gap-3 rounded-sm bg-orange-700 dark:bg-orange-600 px-6 py-3.5 text-sm font-medium text-white transition hover:bg-orange-800 dark:hover:bg-orange-500 shadow-md"
               >
-                Solicitar orçamento
+                Conhecer o canal
                 <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
               <Link
                 to="/obras"
                 className="inline-flex items-center gap-3 rounded-sm border border-zinc-900/20 dark:border-zinc-50/20 px-6 py-3.5 text-sm font-medium text-zinc-900 dark:text-zinc-50 transition hover:border-zinc-900 dark:hover:border-zinc-50 hover:bg-zinc-900/5 dark:hover:bg-zinc-50/5"
               >
-                Ver obras
+                Assistir aos vídeos
               </Link>
             </motion.div>
           </div>
@@ -129,10 +130,10 @@ function Home() {
         <div className="relative border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
           <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-zinc-200 dark:divide-zinc-800 md:grid-cols-4">
             {[
-              { k: "+10", l: "anos de mercado" },
-              { k: "2000+", l: "Passeios entregue" },
-              { k: "Espanha", l: "Madrid" },
-              { k: "100%", l: "Satisfação Garantida" },
+              { k: "+10", l: "anos de histórias" },
+              { k: "2000+", l: "vídeos publicados" },
+              { k: "Madrid", l: "Espanha" },
+              { k: "100%", l: "momentos reais" },
             ].map((s) => (
               <div key={s.l} className="px-6 py-8 lg:px-10">
                 <div className="font-display text-3xl font-medium text-zinc-900 dark:text-zinc-50 md:text-4xl">
@@ -155,7 +156,7 @@ function Home() {
               to: "/sobre",
               n: "01",
               t: "Sobre",
-              d: "+10 anos de engenharia honesta no Vale do Aço.",
+              d: "Conheça a história do canal e como essa jornada começou.",
             },
             {
               to: "/servicos",
