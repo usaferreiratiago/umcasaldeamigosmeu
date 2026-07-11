@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
@@ -8,7 +9,7 @@ import { PageHeader } from "@/components/page-header";
 import logoImg from "@/assets/flagspain.jpg";
 
 // Rota adicionada para resolver o erro do TS
-export const Route = createFileRoute("/videos")({
+export const Route = createFileRoute()({
   head: () => ({
     meta: [
       { title: "Comunidade — Um Casal de Amigos Meu" },
@@ -180,7 +181,7 @@ function Videos() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8">
         <div className="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-zinc-100 dark:border-zinc-900 pb-6">
           <Link
-            to="/"
+            to=".."
             className="group inline-flex items-center justify-center sm:justify-start gap-2 text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 transition-colors py-2 sm:py-0"
           >
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
@@ -215,6 +216,9 @@ function Videos() {
               const globalIndex = startIndex + i + 1;
               const formattedIndex = globalIndex < 10 ? `0${globalIndex}` : globalIndex;
 
+              // Ensure project has a title to satisfy VideoRow's required prop
+              const projectWithTitle = { ...(p as any), title: (p as any).title ?? p.url ?? "" };
+
               return (
                 <motion.div
                   key={`${p.youtubeId}-${globalIndex}`} // Chave alterada para youtubeId visto que o título é dinâmico
@@ -223,7 +227,7 @@ function Videos() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.05 }}
                 >
-                  <VideoRow project={p} formattedIndex={formattedIndex} />
+                  <VideoRow project={projectWithTitle} formattedIndex={formattedIndex} />
                 </motion.div>
               );
             })}
