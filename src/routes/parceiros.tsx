@@ -35,24 +35,28 @@ export const Route = createFileRoute("/parceiros")({
 const allProjects = [
   {
     youtubeId: "v8NRZ5YlPac",
+    title: "Viagem • Madrid, Espanha",
     type: "Viagem • Madrid, Espanha",
     year: "2026",
     url: "https://www.youtube.com/watch?v=v8NRZ5YlPac",
   },
   {
     youtubeId: "VT1KRDQYKgc",
+    title: "Viagem • Madrid, Espanha",
     type: "Viagem • Madrid, Espanha",
     year: "2026",
     url: "https://www.youtube.com/watch?v=VT1KRDQYKgc",
   },
   {
     youtubeId: "sFwVYvpM6ac",
+    title: "Viagem • Madrid, Espanha",
     type: "Viagem • Madrid, Espanha",
     year: "2025",
     url: "https://www.youtube.com/watch?v=sFwVYvpM6ac",
   },
   {
     youtubeId: "yG9eYr6PgHc",
+    title: "Viagem • Madrid, Espanha",
     type: "Viagem • Madrid, Espanha",
     year: "2025",
     url: "https://www.youtube.com/watch?v=yG9eYr6PgHc",
@@ -203,9 +207,9 @@ function Parceiros() {
       </div>
 
       <PageHeader
-        eyebrow="— 03 / Vídeos"
-        title="Cada vídeo conta uma nova história."
-        intro="Explore nossas viagens, passeios e experiências compartilhadas com a comunidade. Cada vídeo registra momentos reais, descobertas e memórias inesquecíveis."
+        eyebrow="— 07 / Parceiros"
+        title="Conheça nossos parceiros e colaboradores."
+        intro="Descubra as empresas e indivíduos que nos ajudam a criar conteúdo incrível e experiências memoráveis para nossa comunidade."
       />
 
       <section className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-300">
