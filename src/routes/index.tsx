@@ -112,13 +112,13 @@ function Home() {
               transition={{ duration: 0.8, delay: 0.25 }}
               className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:flex-wrap"
             >
-              <Link
+              {/* <Link
                 to="/contato"
                 className="group inline-flex w-full items-center justify-center gap-3 rounded-sm border border-blue-600/30 bg-blue-50/50 px-6 py-3.5 text-sm font-medium text-blue-700 transition-all hover:bg-blue-600 hover:text-white dark:border-blue-500/20 dark:bg-blue-950/20 dark:text-blue-400 dark:hover:bg-blue-600 dark:hover:text-white sm:w-auto shadow-md"
               >
                 Fale conosco
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </Link>
+              </Link> */}
 
               <Link
                 to="https://www.youtube.com/@umcasaldeamigosmeu"
