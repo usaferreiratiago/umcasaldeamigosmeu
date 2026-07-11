@@ -1,42 +1,23 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowUpRight, ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { PageHeader } from "@/components/page-header";
 
 // Importação da logo utilizando o caminho relativo do projeto
 import logoImg from "@/assets/flagspain.jpg";
 
-// IMPORTS DAS FOTOS ORGANIZADAS POR PASTA DE Video
-// Video 1
-import p1_f1 from "@/assets/videos/video-1/foto-1.jpg";
-import p1_f2 from "@/assets/videos/video-1/foto-2.jpg";
-import p1_f3 from "@/assets/videos/video-1/foto-3.jpg";
-import p1_f4 from "@/assets/videos/video-1/foto-4.jpg";
-
-// Video 2
-import p2_f1 from "@/assets/videos/video-2/foto-1.jpg";
-import p2_f2 from "@/assets/videos/video-2/foto-2.jpg";
-import p2_f3 from "@/assets/videos/video-2/foto-3.jpg";
-import p2_f4 from "@/assets/videos/video-2/foto-4.jpg";
-
-// Video 3
-import p3_f1 from "@/assets/videos/video-3/foto-1.jpg";
-import p3_f2 from "@/assets/videos/video-3/foto-2.jpg";
-import p3_f3 from "@/assets/videos/video-3/foto-3.jpg";
-import p3_f4 from "@/assets/videos/video-3/foto-4.jpg";
-
-// Rota adicionada explicitamente para resolver o erro do TS
+// Rota adicionada para resolver o erro do TS
 export const Route = createFileRoute("/videos")({
   head: () => ({
     meta: [
-      { title: "Videos — Seno Engenharia" },
+      { title: "Vídeos — Seno Engenharia" },
       {
         name: "description",
         content:
-          "Portfólio de Videos residenciais, comerciais e industriais entregues pela Seno Engenharia no Vale do Aço.",
+          "Portfólio de Vídeos residenciais, comerciais e industriais entregues pela Seno Engenharia no Vale do Aço.",
       },
-      { property: "og:title", content: "Videos — Seno Engenharia" },
+      { property: "og:title", content: "Vídeos — Seno Engenharia" },
       {
         property: "og:description",
         content: "Portfólio que se mede em metros quadrados e décadas.",
@@ -46,24 +27,24 @@ export const Route = createFileRoute("/videos")({
   component: Videos,
 });
 
-// Mock utilizando os arrays de imagens específicos de cada pasta
+// Mock configurado com os IDs reais/exemplos dos vídeos do YouTube
 const allProjects = [
   {
-    images: [p1_f1, p1_f2, p1_f3, p1_f4],
+    youtubeId: "dQw4w9WgXcQ", // Substitua pelo ID do respectivo vídeo do YouTube
     title: "Conhecendo Madrid",
     type: "Viagem • Madrid, Espanha",
     year: "2026",
     url: "https://www.youtube.com/@umcasaldeamigosmeu",
   },
   {
-    images: [p2_f1, p2_f2, p2_f3, p2_f4],
+    youtubeId: "dQw4w9WgXcQ", // Substitua pelo ID do respectivo vídeo do YouTube
     title: "Passeio pelo centro histórico",
     type: "Turismo • Espanha",
     year: "2026",
     url: "https://www.youtube.com/@umcasaldeamigosmeu",
   },
   {
-    images: [p3_f1, p3_f2, p3_f3, p3_f4],
+    youtubeId: "dQw4w9WgXcQ", // Substitua pelo ID do respectivo vídeo do YouTube
     title: "Momentos do nosso dia",
     type: "Vlog",
     year: "2025",
@@ -72,93 +53,6 @@ const allProjects = [
 ];
 
 const ITEMS_PER_PAGE = 5;
-
-// Componente isolado com autoplay para o carrossel de fotos
-function ProjectCarousel({ images, title }: { images: string[]; title: string }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-
-  // Efeito para transição de slides automática (Autoplay)
-  useEffect(() => {
-    if (isHovered) return; // Pausa o autoplay quando o mouse está por cima
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    }, 5000); // Passa a imagem a cada 5 segundos
-
-    return () => clearInterval(interval);
-  }, [images.length, isHovered]);
-
-  const nextSlide = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
-
-  const prevSlide = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
-
-  return (
-    <div
-      className="relative overflow-hidden rounded-sm bg-zinc-100 dark:bg-zinc-900 aspect-4/3 group"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {/* Imagem com Animação */}
-      <div className="w-full h-full relative">
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={currentIndex}
-            src={images[currentIndex]}
-            alt={`${title} - Foto ${currentIndex + 1}`}
-            initial={{ opacity: 0.8 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0.8 }}
-            transition={{ duration: 0.3 }}
-            loading="lazy"
-            className="w-full h-full object-cover transition duration-500 transform group-hover:scale-[1.02]"
-          />
-        </AnimatePresence>
-      </div>
-
-      {/* Setas de navegação (Visíveis ao passar o mouse) */}
-      <div className="absolute inset-0 flex items-center justify-between p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-        <button
-          onClick={prevSlide}
-          className="p-1.5 rounded-full bg-white/80 dark:bg-zinc-950/80 text-zinc-800 dark:text-zinc-200 hover:bg-white dark:hover:bg-zinc-950 transition shadow-sm pointer-events-auto cursor-pointer"
-          aria-label="Foto anterior"
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="p-1.5 rounded-full bg-white/80 dark:bg-zinc-950/80 text-zinc-800 dark:text-zinc-200 hover:bg-white dark:hover:bg-zinc-950 transition shadow-sm pointer-events-auto cursor-pointer"
-          aria-label="Próxima foto"
-        >
-          <ChevronRight className="h-5 w-5" />
-        </button>
-      </div>
-
-      {/* Indicadores de bolinha (Dots) */}
-      <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-1.5 bg-black/20 dark:bg-white/10 backdrop-blur-xs px-2 py-1 rounded-full">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={(e) => {
-              e.stopPropagation();
-              setCurrentIndex(index);
-            }}
-            className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
-              currentIndex === index ? "w-3 bg-white" : "w-1.5 bg-white/50"
-            }`}
-            aria-label={`Ir para foto ${index + 1}`}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
 
 function Videos() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -177,7 +71,7 @@ function Videos() {
 
   return (
     <div className="relative min-h-screen bg-white dark:bg-zinc-950 transition-colors duration-300 w-full overflow-x-hidden">
-      {/* Barra superior de ações (Voltar + Logo) */}
+      {/* Barra superior de ações (Voltar + Logo Responsiva) */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8">
         <div className="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-zinc-100 dark:border-zinc-900 pb-6">
           <Link
@@ -192,12 +86,12 @@ function Videos() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex justify-center sm:justify-start"
+            className="flex justify-center sm:justify-end w-full sm:w-auto"
           >
             <img
               src={logoImg}
               alt="Seno Engenharia Logo"
-              className="h-10 sm:h-12 w-auto object-contain transition-all duration-300 dark:brightness-110 dark:contrast-105"
+              className="w-full max-w-40 sm:max-w-50 md:max-w-60 h-auto object-contain transition-all duration-300 dark:brightness-110 dark:contrast-105"
             />
           </motion.div>
         </div>
@@ -225,9 +119,19 @@ function Videos() {
                   transition={{ duration: 0.5, delay: i * 0.05 }}
                   className="grid grid-cols-12 items-center gap-4 sm:gap-6 bg-white dark:bg-zinc-950 py-6 sm:py-8 border-b border-zinc-100 dark:border-zinc-900 last:border-0"
                 >
-                  {/* Coluna da Imagem com o Carrossel e Autoplay */}
+                  {/* Coluna do Player do YouTube Responsivo (16:9) */}
                   <div className="col-span-12 md:col-span-5">
-                    <ProjectCarousel images={p.images} title={p.title} />
+                    <div className="w-full aspect-video rounded-sm overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xs">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={`https://www.youtube.com/embed/${p.youtubeId}`}
+                        title={p.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        className="w-full h-full border-0"
+                      />
+                    </div>
                   </div>
 
                   {/* Coluna do Número */}
@@ -256,7 +160,7 @@ function Videos() {
                       href={p.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label="Assistir ao vídeo"
+                      aria-label="Assistir ao vídeo no YouTube"
                       className="p-2 -mr-2"
                     >
                       <ArrowUpRight className="h-6 w-6 text-zinc-800 dark:text-zinc-200 transition hover:text-orange-700 dark:hover:text-orange-500 hover:translate-x-0.5 hover:-translate-y-0.5 transform duration-200" />
@@ -282,7 +186,7 @@ function Videos() {
               <span className="font-semibold text-zinc-900 dark:text-zinc-100">
                 {allProjects.length}
               </span>{" "}
-              Videos
+              Vídeos
             </div>
 
             <div className="flex items-center justify-center gap-2 self-center sm:self-auto overflow-x-auto max-w-full py-1">
