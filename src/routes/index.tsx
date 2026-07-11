@@ -131,7 +131,7 @@ function Home() {
           <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-zinc-200 dark:divide-zinc-800 md:grid-cols-4">
             {[
               { k: "+10", l: "anos de histórias" },
-              { k: "2000+", l: "vídeos publicados" },
+              { k: "+550", l: "vídeos publicados" },
               { k: "Madrid", l: "Espanha" },
               { k: "100%", l: "momentos reais" },
             ].map((s) => (
