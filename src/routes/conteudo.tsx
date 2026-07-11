@@ -25,7 +25,7 @@ export const Route = createFileRoute("/conteudo")({
       },
     ],
   }),
-  component: conteudo,
+  component: Conteudo,
 });
 
 const services = [
@@ -61,7 +61,7 @@ const services = [
   },
 ];
 
-function conteudo() {
+function Conteudo() {
   return (
     <div className="relative min-h-screen bg-white dark:bg-zinc-950 transition-colors duration-300 w-full overflow-x-hidden">
       {/* Barra superior */}
