@@ -6,9 +6,6 @@ import { useState } from "react";
 // Reaproveitando os assets de imagem padrão do seu projeto
 import f1 from "@/assets/f1.jpg";
 import f2 from "@/assets/f2.jpg";
-import f3 from "@/assets/f3.jpg";
-import f4 from "@/assets/f4.jpg";
-import f5 from "@/assets/f5.jpg";
 import { PageHeader } from "@/components/page-header";
 
 // Importação da logo utilizando o caminho relativo do projeto
