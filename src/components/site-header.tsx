@@ -5,7 +5,7 @@ import { useState } from "react";
 const links = [
   { to: "/sobre", label: "Sobre" },
   { to: "/conteudo", label: "Serviços" },
-  { to: "/videos", label: "Obras" },
+  { to: "/videos", label: "Videos" },
   { to: "/comunidades", label: "Comunidades" },
 ] as const;
 
