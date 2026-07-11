@@ -62,7 +62,7 @@ function Home() {
         <div className="absolute inset-0">
           <img
             src={heroImg}
-            alt="Obra em concreto da Um casal de amigos meu"
+            alt="Um Casal de Amigos Meu"
             width={1920}
             height={1080}
             className="h-full w-full object-cover"
@@ -86,12 +86,12 @@ function Home() {
               transition={{ duration: 0.9, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
               className="font-display text-[clamp(2.75rem,8vw,7rem)] font-medium leading-[0.95] text-zinc-900 dark:text-zinc-50 tracking-tight"
             >
-              Construímos com
+              Vivendo cada
               <br />
               <span className="italic font-light text-orange-700 dark:text-orange-500">
-                precisão
+                momento
               </span>{" "}
-              &amp; permanência.
+              &amp; juntos.
             </motion.h1>
 
             <motion.p
