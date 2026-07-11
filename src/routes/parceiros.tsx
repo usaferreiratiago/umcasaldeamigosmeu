@@ -1,6 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowUpRight, ChevronLeft, ChevronRight, ArrowLeft, Youtube } from "lucide-react";
+import {
+  ArrowUpRight,
+  ChevronLeft,
+  ChevronRight,
+  ArrowLeft,
+  Youtube,
+  Instagram,
+} from "lucide-react";
 import { useState, useEffect } from "react";
 import { PageHeader } from "@/components/page-header";
 
@@ -134,20 +141,7 @@ function VideoRow({
       </div>
 
       {/* Coluna do Ano e Link */}
-      {/* <div className="col-span-9 md:col-span-2 flex items-center justify-between gap-4 order-2 md:order-0 mt-2 md:mt-0 justify-self-end md:justify-self-auto w-full md:w-auto">
-        <div className="font-display text-xl sm:text-2xl font-medium text-zinc-400 dark:text-zinc-500 font-mono">
-          {project.year}
-        </div>
-        <a
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Assistir ao vídeo no YouTube"
-          className="p-2 -mr-2"
-        >
-          <ArrowUpRight className="h-6 w-6 text-zinc-800 dark:text-zinc-200 transition hover:text-orange-700 dark:hover:text-orange-500 hover:translate-x-0.5 hover:-translate-y-0.5 transform duration-200" />
-        </a>
-      </div> */}
+
       <div className="col-span-9 md:col-span-2 flex items-center justify-between gap-4 order-2 md:order-0 mt-2 md:mt-0 justify-self-end md:justify-self-auto w-full md:w-auto">
         {/* Ano */}
         <div className="font-display text-xl sm:text-2xl font-medium text-zinc-400 dark:text-zinc-500 font-mono">
@@ -156,17 +150,6 @@ function VideoRow({
 
         {/* Links */}
         <div className="flex items-center gap-2">
-          {/* YouTube */}
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Assistir ao vídeo no YouTube"
-            className="group inline-flex items-center justify-center rounded-sm border border-red-600/30 bg-red-50/50 p-2 text-red-700 transition-all hover:bg-red-600 hover:text-white dark:border-red-500/20 dark:bg-red-950/20 dark:text-red-400 dark:hover:bg-red-600 dark:hover:text-white"
-          >
-            <Youtube className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-
           {/* Instagram */}
           {project.url2 && (
             <a
@@ -176,6 +159,7 @@ function VideoRow({
               aria-label="Abrir perfil do Instagram"
               className="group inline-flex items-center justify-center rounded-sm border border-pink-600/30 bg-pink-50/50 px-3 py-2 text-xs font-medium text-pink-700 transition-all hover:bg-pink-600 hover:text-white dark:border-pink-500/20 dark:bg-pink-950/20 dark:text-pink-400 dark:hover:bg-pink-600 dark:hover:text-white"
             >
+              <Instagram className="h-4 w-4 mr-2" />
               Instagram
             </a>
           )}
