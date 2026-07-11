@@ -19,7 +19,7 @@ const IndexRoute = IndexImport.update({ path: '/', getParentRoute: () => rootRou
 const ClientesRoute = ClientesImport.update({ path: '/clientes', getParentRoute: () => rootRoute } as any)
 const ContatoRoute = ContatoImport.update({ path: '/contato', getParentRoute: () => rootRoute } as any)
 const FuncionariosRoute = FuncionariosImport.update({ path: '/funcionarios', getParentRoute: () => rootRoute } as any) // ADICIONADO
-const ObrasRoute = VideosImport.update({ path: '/videos', getParentRoute: () => rootRoute } as any)
+const VideosRoute = VideosImport.update({ path: '/videos', getParentRoute: () => rootRoute } as any)
 const ServicosRoute = ServicosImport.update({ path: '/servicos', getParentRoute: () => rootRoute } as any)
 const SobreRoute = SobreImport.update({ path: '/sobre', getParentRoute: () => rootRoute } as any)
 
@@ -28,7 +28,7 @@ export const routeTree = rootRoute._addFileChildren({
   '/clientes': ClientesRoute,
   '/contato': ContatoRoute,
   '/funcionarios': FuncionariosRoute,
-  '/videos': ObrasRoute,
+  '/videos': VideosRoute,
   '/servicos': ServicosRoute,
   '/sobre': SobreRoute,
 })
